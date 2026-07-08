@@ -1,0 +1,16 @@
+# Netlify-Konfiguration — The Reform Room
+# Deployt als Next.js-Site über das offizielle Netlify Next Runtime Plugin.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Netlify Forms Fallback (falls JS deaktiviert / Bot-Erkennung).
+# Das eigentliche Handling läuft server-seitig über /api/contact + /api/newsletter (Brevo).
+# public/__forms.html registriert die Formulare für Netlify.
