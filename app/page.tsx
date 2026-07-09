@@ -85,89 +85,6 @@ export default function Home() {
       <Navigation />
       <Hero comingSoon={comingSoon} />
 
-      {/* ─── Intro ─── */}
-      <section className="py-24 lg:py-36 bg-porcelain">
-        <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
-          <ScrollReveal>
-            <p className="eyebrow text-olive mb-6">{intro.eyebrow}</p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <h2 className="font-display font-light text-espresso text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-8 whitespace-pre-line">
-              {intro.heading}
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="text-espresso/70 text-lg leading-relaxed font-light">{intro.body}</p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── Values ─── */}
-      <section className="py-20 lg:py-28 bg-sand">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="max-w-2xl mb-14">
-            <ScrollReveal>
-              <p className="eyebrow text-olive mb-5">{values.eyebrow}</p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <h2 className="font-display font-light text-espresso text-4xl md:text-5xl leading-tight">
-                {values.heading}
-              </h2>
-            </ScrollReveal>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            {values.items.map((item, i) => (
-              <ScrollReveal key={item.title} delay={0.1 + i * 0.08}>
-                <div className="h-full">
-                  <span className="font-display text-3xl text-olive/60">0{i + 1}</span>
-                  <h3 className="font-display text-2xl md:text-3xl text-espresso mt-3 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-espresso/65 leading-relaxed font-light">{item.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Studio image break ─── */}
-      <section className="relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative min-h-[45vh] lg:min-h-[80vh]">
-            <Image
-              src="/images/studio.webp"
-              alt="Der Trainingsraum von The Reform Room in Lemgo mit Reformer-Geräten"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="bg-walnut text-porcelain flex items-center">
-            <div className="px-8 py-16 lg:px-16 lg:py-24 max-w-xl">
-              <ScrollReveal>
-                <p className="eyebrow text-porcelain/60 mb-6">Der Raum</p>
-              </ScrollReveal>
-              <ScrollReveal delay={0.1}>
-                <h2 className="font-display font-light text-4xl md:text-5xl leading-tight mb-6">
-                  Ein Ort zum Ankommen.
-                </h2>
-              </ScrollReveal>
-              <ScrollReveal delay={0.2}>
-                <p className="text-porcelain/75 text-lg leading-relaxed font-light mb-4">
-                  Warmes Licht, natürliche Materialien und hochwertige Reformer – The Reform Room
-                  ist bewusst reduziert gestaltet. Ein Raum, der einlädt, den Kopf frei zu machen
-                  und ganz bei dir anzukommen.
-                </p>
-                <p className="text-porcelain/60 text-sm leading-relaxed font-light">
-                  Mitten in Lemgo · Lagesche Str. 15a
-                </p>
-              </ScrollReveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── Courses ─── */}
       <section id="kurse" className="py-24 lg:py-32 bg-porcelain scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
@@ -294,6 +211,88 @@ export default function Home() {
               <p className="mt-5 text-sm text-espresso/50 font-light">{pricing.note}</p>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Intro ─── */}
+      <section className="pt-14 pb-20 lg:pt-16 lg:pb-28 bg-porcelain">
+        <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+          <ScrollReveal>
+            <h2 className="font-display font-light text-espresso text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-5 whitespace-pre-line">
+              {intro.heading}
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-espresso/70 text-lg leading-relaxed font-light">{intro.body}</p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Values ─── */}
+      <section className="py-20 lg:py-24 bg-sand">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="max-w-2xl mb-10">
+            <ScrollReveal>
+              <h2 className="font-display font-light text-espresso text-4xl md:text-5xl leading-tight">
+                {values.heading}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <p className="mt-3 font-display font-light text-espresso/55 text-xl md:text-2xl leading-snug max-w-lg">
+                {values.subheading}
+              </p>
+            </ScrollReveal>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {values.items.map((item, i) => (
+              <ScrollReveal key={item.title} delay={0.1 + i * 0.08}>
+                <div className="h-full">
+                  <span className="font-display text-3xl text-olive/60">0{i + 1}</span>
+                  <h3 className="font-display text-2xl md:text-3xl text-espresso mt-3 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-espresso/65 leading-relaxed font-light">{item.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Studio image break ─── */}
+      <section className="relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="relative min-h-[45vh] lg:min-h-[80vh]">
+            <Image
+              src="/images/studio.webp"
+              alt="Der Trainingsraum von The Reform Room in Lemgo mit Reformer-Geräten"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="bg-walnut text-porcelain flex items-center">
+            <div className="px-8 py-16 lg:px-16 lg:py-24 max-w-xl">
+              <ScrollReveal>
+                <p className="eyebrow text-porcelain/60 mb-6">Der Raum</p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h2 className="font-display font-light text-4xl md:text-5xl leading-tight mb-6">
+                  Ein Ort zum Ankommen.
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <p className="text-porcelain/75 text-lg leading-relaxed font-light mb-4">
+                  Warmes Licht, natürliche Materialien und hochwertige Reformer – The Reform Room
+                  ist bewusst reduziert gestaltet. Ein Raum, der einlädt, den Kopf frei zu machen
+                  und ganz bei dir anzukommen.
+                </p>
+                <p className="text-porcelain/60 text-sm leading-relaxed font-light">
+                  Mitten in Lemgo · Lagesche Str. 15a
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
         </div>
       </section>
 

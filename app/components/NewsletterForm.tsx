@@ -6,7 +6,13 @@ import { trackEvent } from "@/app/lib/analytics";
 
 const c = siteContent.newsletter;
 
-export function NewsletterForm({ variant = "light" }: { variant?: "light" | "dark" }) {
+export function NewsletterForm({
+  variant = "light",
+  submitLabel,
+}: {
+  variant?: "light" | "dark";
+  submitLabel?: string;
+}) {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState(""); // Honeypot
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -78,7 +84,7 @@ export function NewsletterForm({ variant = "light" }: { variant?: "light" | "dar
           disabled={status === "loading"}
           className={`${btnClass} px-8 py-3 text-xs tracking-[0.18em] uppercase transition-colors disabled:opacity-50`}
         >
-          {status === "loading" ? "…" : c.submit}
+          {status === "loading" ? "…" : submitLabel ?? c.submit}
         </button>
       </div>
       {status === "error" && (

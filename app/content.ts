@@ -39,14 +39,15 @@ export const siteContent = {
     subline:
       "Ein Boutique-Studio für Reformer Pilates in Lemgo. Präzises, achtsames Training in kleinen Gruppen – für ein Körpergefühl, das dich durch den Alltag trägt.",
     ctaBook: "Platz sichern",
-    ctaSecondary: "Studio entdecken",
+    ctaSecondary: "Mehr erfahren",
   },
 
   comingSoon: {
     badge: "Coming Soon",
     line: "In Lemgo",
     body: "The Reform Room eröffnet bald. Trag dich ein und erfahre als Erste, wann die ersten Classes buchbar sind.",
-    cta: "Auf die Liste",
+    submit: "Jetzt eintragen",
+    trustHint: "Kostenlos & unverbindlich. Keine Werbung.",
   },
 
   intro: {
@@ -57,8 +58,8 @@ export const siteContent = {
 
   /** Markenwerte (angelehnt an Boutique-Studio-Sprache) */
   values: {
-    eyebrow: "Warum The Reform Room",
-    heading: "Bewegung, bewusst kuratiert.",
+    heading: "Warum The Reform Room.",
+    subheading: "Bewegung, bewusst kuratiert.",
     items: [
       {
         title: "Kleine Gruppen",

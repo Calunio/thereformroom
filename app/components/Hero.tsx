@@ -21,7 +21,7 @@ export function Hero({ comingSoon }: { comingSoon: boolean }) {
           <div className="absolute inset-0 bg-ink/25" />
         </div>
 
-        <div className="relative z-10 text-center text-porcelain px-6 max-w-3xl mx-auto pt-28 pb-20">
+        <div className="relative z-10 text-center text-porcelain px-6 max-w-3xl mx-auto pt-28 pb-12">
           <p className="eyebrow text-porcelain mb-6 animate-fade-in-up drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
             {comingSoon ? `${cs.badge} · ${cs.line}` : hero.eyebrow}
           </p>
@@ -40,16 +40,20 @@ export function Hero({ comingSoon }: { comingSoon: boolean }) {
             {comingSoon ? cs.body : hero.subline}
           </p>
 
-          <div className="mt-10 animate-fade-in-up animation-delay-600">
+          <div className="mt-8 animate-fade-in-up animation-delay-600">
             {comingSoon ? (
               <div className="max-w-md mx-auto">
-                <NewsletterForm variant="dark" />
-                <p className="mt-4 text-xs tracking-[0.15em] uppercase text-porcelain/50">
-                  {cs.cta}
-                </p>
+                <NewsletterForm variant="dark" submitLabel={cs.submit} />
+                <p className="mt-4 text-xs text-porcelain/55 font-light">{cs.trustHint}</p>
+                <a
+                  href="#kurse"
+                  className="inline-block mt-5 text-xs tracking-[0.12em] uppercase text-porcelain/45 hover:text-porcelain/75 transition-colors"
+                >
+                  {hero.ctaSecondary}
+                </a>
               </div>
             ) : (
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col items-center gap-5">
                 <a
                   href={siteContent.bookingUrl}
                   className="inline-block bg-porcelain text-espresso px-10 py-3.5 text-xs tracking-[0.2em] uppercase hover:bg-sand transition-all duration-300"
@@ -58,7 +62,7 @@ export function Hero({ comingSoon }: { comingSoon: boolean }) {
                 </a>
                 <a
                   href="#kurse"
-                  className="inline-block border border-porcelain/60 text-porcelain px-10 py-3.5 text-xs tracking-[0.2em] uppercase hover:bg-porcelain hover:text-espresso transition-all duration-300"
+                  className="text-xs tracking-[0.12em] uppercase text-porcelain/45 hover:text-porcelain/75 transition-colors"
                 >
                   {hero.ctaSecondary}
                 </a>
