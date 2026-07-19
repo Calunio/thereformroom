@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteContent } from "@/app/content";
-import { LegalPage, LegalH2, Placeholder } from "@/app/components/LegalPage";
+import { LegalPage, LegalH2 } from "@/app/components/LegalPage";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thereformroom.de";
 
@@ -16,11 +16,6 @@ const { studio } = siteContent;
 export default function ImpressumPage() {
   return (
     <LegalPage title="Impressum">
-      <p className="text-sm text-espresso/50 italic">
-        Hinweis: Dieses Impressum ist ein Entwurf und muss vor dem Launch von der Inhaberin
-        geprüft und freigegeben werden (fehlende Angaben sind markiert).
-      </p>
-
       <LegalH2>Angaben gemäß § 5 DDG</LegalH2>
       <p>
         {studio.name}
@@ -33,17 +28,7 @@ export default function ImpressumPage() {
       </p>
 
       <LegalH2>Kontakt</LegalH2>
-      <p>
-        E-Mail: {studio.email}
-        <br />
-        Telefon: <Placeholder>Telefonnummer ergänzen</Placeholder>
-      </p>
-
-      <LegalH2>Umsatzsteuer</LegalH2>
-      <p>
-        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:{" "}
-        <Placeholder>USt-IdNr. ergänzen oder Kleinunternehmerhinweis</Placeholder>
-      </p>
+      <p>E-Mail: {studio.email}</p>
 
       <LegalH2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</LegalH2>
       <p>

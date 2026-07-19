@@ -1,17 +1,16 @@
 /**
- * Coming-Soon-Steuerung.
+ * Coming-Soon-Inhalte (Hero / Buchung) + Launch-Datum.
  *
- * Solange das aktuelle Datum vor NEXT_PUBLIC_LAUNCH_DATE liegt, gilt das Studio
- * als "noch nicht eröffnet" → Coming-Soon-Banner sichtbar. Ist das Launch-Datum
- * erreicht/überschritten (oder wurde keins gesetzt und wir sind live), schaltet
- * sich das Banner automatisch ab.
+ * Pre-Launch-Gate (Domain-Overlay) liegt in `prelaunch-gate.ts` und wird
+ * von der Middleware genutzt.
  *
- * Verhalten:
- *  - NEXT_PUBLIC_LAUNCH_DATE gesetzt & in der Zukunft  → Coming Soon AN
- *  - NEXT_PUBLIC_LAUNCH_DATE gesetzt & erreicht/vorbei → Coming Soon AUS
- *  - NEXT_PUBLIC_LAUNCH_DATE leer                      → Coming Soon AN
- *    (bis das Datum gepflegt wird — bewusst konservativ vor dem Launch)
+ * Coming-Soon-Inhalte:
+ *  - Preview / localhost → immer AUS (volle Website zum Reviewen)
+ *  - Öffentliche Domain  → gesteuert über NEXT_PUBLIC_LAUNCH_DATE
  */
+
+import { headers } from "next/headers";
+import { isPublicProductionHost } from "@/app/lib/prelaunch-gate";
 
 const RAW_LAUNCH = process.env.NEXT_PUBLIC_LAUNCH_DATE?.trim();
 
@@ -21,9 +20,27 @@ export function getLaunchDate(): Date | null {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
-/** true, solange das Studio als „coming soon" gilt. */
-export function isComingSoon(now: Date = new Date()): boolean {
+function comingSoonByLaunchDate(now: Date): boolean {
   const launch = getLaunchDate();
-  if (!launch) return true; // kein Datum gepflegt → konservativ Coming Soon
+  if (!launch) return true;
   return now.getTime() < launch.getTime();
 }
+
+/**
+ * Coming-Soon-Inhalte (Hero-Newsletter, Buchungs-Placeholder).
+ * Auf Netlify-Preview / localhost immer false → volle Website reviewbar.
+ */
+export async function isComingSoon(now: Date = new Date()): Promise<boolean> {
+  const h = await headers();
+  const host = h.get("x-forwarded-host") || h.get("host") || "";
+  if (!isPublicProductionHost(host)) return false;
+  return comingSoonByLaunchDate(now);
+}
+
+// Re-exports für bestehenden Import-Pfad
+export {
+  isPreLaunchGateEnabled,
+  isPublicProductionHost,
+  shouldShowPreLaunchGate,
+  PUBLIC_PRODUCTION_HOSTS,
+} from "@/app/lib/prelaunch-gate";

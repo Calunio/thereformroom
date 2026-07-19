@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/buchen` },
 };
 
-export default function BuchenPage() {
-  const comingSoon = isComingSoon();
+export default async function BuchenPage() {
+  const comingSoon = await isComingSoon();
   const { booking } = siteContent;
 
   return (

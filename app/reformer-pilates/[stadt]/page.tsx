@@ -119,7 +119,7 @@ export default async function ReformerPilatesStadtPage({
   const city = getCityBySlug(stadt);
   if (!city) notFound();
 
-  const comingSoon = isComingSoon();
+  const comingSoon = await isComingSoon();
   const isStudioCity = city.driveMinutesDisplay === "0";
 
   const anreiseFaq = {
@@ -274,7 +274,7 @@ export default async function ReformerPilatesStadtPage({
               </h2>
             </ScrollReveal>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {siteContent.courses.items.map((course) => (
               <article
                 key={course.id}

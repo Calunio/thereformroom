@@ -63,8 +63,8 @@ function FaqJsonLd() {
   );
 }
 
-export default function Home() {
-  const comingSoon = isComingSoon();
+export default async function Home() {
+  const comingSoon = await isComingSoon();
   const {
     intro,
     values,
@@ -102,7 +102,7 @@ export default function Home() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {courses.items.map((course, i) => (
               <ScrollReveal key={course.id} delay={0.1 + i * 0.08}>
                 <article className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-8 hover:border-taupe/35 transition-colors">

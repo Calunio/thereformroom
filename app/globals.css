@@ -4,17 +4,21 @@
 /* ============================================================
    THE REFORM ROOM — Brand Tokens
 
+   Abgeleitet aus dem Logo (Cream #F8F4EC · Espresso #3C3028)
+   und der warmen Studio-Fotografie. Eine einzige Farbwelt:
+   warm, ruhig, hochwertig, feminin — Ivory → Sand → Cocoa.
+
    Kern-Palette:
-   - Porcelain #F7F2EA  (heller Cream-Hintergrund / Basis)
-   - Sand      #E7DDCD  (warmes Beige aus dem Logo)
-   - Almond    #D8C9B4  (weiches Sand-Mittel)
-   - Clay      #C2AE95  (warmes Neutral)
-   - Taupe     #A88E72  (erdiges Neutral / Linien)
-   - Olive     #83835F  (ruhiger Grün-Akzent)
-   - Sage      #9A9A7B  (helleres Oliv)
-   - Walnut    #6E5A47  (mittleres Holz-Braun)
-   - Espresso  #3B3128  (dunkles Braun — Logo, Primärtext)
-   - Ink       #262019  (tiefes Braun-Schwarz — Dark-UI, Footer)
+   - Porcelain #F9F5ED  (Warm Ivory / Soft Cream — Basis)
+   - Sand      #EDE4D5  (Linen / Soft Beige — Sektionen)
+   - Almond    #E2D2BC  (weiches Warm-Beige)
+   - Clay      #CDB89A  (warmes Neutral)
+   - Taupe     #B39476  (Light Taupe / Linien)
+   - Olive     #7A6B4C  (warmer Cocoa-Khaki-Akzent, Logo-Familie)
+   - Sage      #A6977C  (helleres Soft Taupe)
+   - Walnut    #7A614C  (Cocoa Brown — Buttons Hover)
+   - Espresso  #3C3028  (Logo-Braun — Primärtext, Buttons)
+   - Ink       #32281F  (tiefes Warm Espresso — Dark-UI, Footer)
 
    Schriften:
    - Cormorant Garamond → Display / Überschriften
@@ -22,20 +26,20 @@
    ============================================================ */
 
 :root {
-  --porcelain: #f7f2ea;
-  --sand: #e7ddcd;
-  --almond: #d8c9b4;
-  --clay: #c2ae95;
-  --taupe: #a88e72;
-  --olive: #6b6b47;
-  --sage: #9a9a7b;
-  --walnut: #6e5a47;
-  --espresso: #3b3128;
-  --ink: #262019;
+  --porcelain: #f9f5ed;
+  --sand: #ede4d5;
+  --almond: #e2d2bc;
+  --clay: #cdb89a;
+  --taupe: #b39476;
+  --olive: #7a6b4c;
+  --sage: #a6977c;
+  --walnut: #7a614c;
+  --espresso: #3c3028;
+  --ink: #32281f;
 
   --background: var(--porcelain);
   --foreground: var(--espresso);
-  --card: #efe7da;
+  --card: #f5efe5;
   --card-foreground: var(--espresso);
   --primary: var(--olive);
   --primary-foreground: var(--porcelain);
@@ -45,7 +49,7 @@
   --muted-foreground: var(--olive);
   --accent: var(--taupe);
   --accent-foreground: var(--porcelain);
-  --border: rgba(59, 49, 40, 0.12);
+  --border: rgba(60, 48, 40, 0.12);
   --ring: var(--olive);
 }
 

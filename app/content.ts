@@ -20,7 +20,7 @@ export const siteContent = {
     street: "Lagesche Str. 15a",
     postalCode: "32657",
     city: "Lemgo",
-    email: "Lisa.kutschinski@web.de",
+    email: "lisa@thereformroom.de",
     phone: "", // [PLATZHALTER] Telefonnummer von Lisa
   },
 
@@ -79,35 +79,51 @@ export const siteContent = {
     ] as Array<{ title: string; description: string }>,
   },
 
-  /** Kurse & Angebote (Pflicht: Reformer + Intro) */
+  /** Kurse & Angebote */
   courses: {
     eyebrow: "Classes",
     heading: "Finde deine Class.",
     subheading:
-      "Egal ob du gerade erst startest oder deine Praxis vertiefen möchtest – hier findest du deinen Einstieg.",
+      "Finde den Kurs, der zu deinem Level und deinem Trainingsziel passt.",
     items: [
       {
-        id: "reformer-intro",
-        name: "Reformer Intro",
-        forWho: "Für Einsteigerinnen",
+        id: "new-to-reformer",
+        name: "New to Reformer",
+        forWho: "Geeignet für Einsteiger und den ersten Studiobesuch.",
         description:
-          "Dein Einstieg auf dem Reformer. In der Intro lernst du das Gerät, die Grundprinzipien und die wichtigsten Bewegungen kennen – ruhig, sicher und Schritt für Schritt. Voraussetzung für alle, die noch keine Reformer-Erfahrung haben.",
-        ctaBook: "Intro buchen",
-      },
-      {
-        id: "reformer-flow",
-        name: "Reformer Flow",
-        forWho: "Für alle Level",
-        description:
-          "Dynamisches, fließendes Ganzkörpertraining auf dem Reformer. Kraft, Stabilität und Beweglichkeit in einer Class – kontrolliert, kraftvoll und mit Fokus auf saubere Technik.",
+          "Der ideale Einstieg für alle, die Reformer Pilates zum ersten Mal ausprobieren. Du lernst das Gerät, die wichtigsten Bewegungsabläufe und die grundlegende Technik in einem ruhigen und verständlichen Tempo kennen.",
         ctaBook: "Class buchen",
       },
       {
-        id: "reformer-flow-plus",
-        name: "Reformer Strong", // [PLATZHALTER] Kursnamen mit Lisa final abstimmen
-        forWho: "Für Fortgeschrittene",
+        id: "booty-reform",
+        name: "Booty Reform",
+        forWho: "Fokus auf Glutes, Beine und Stabilität.",
         description:
-          "Intensiver, herausfordernder und mit mehr Widerstand: Für alle, die den Reformer schon kennen und ihre Praxis auf das nächste Level bringen möchten.",
+          "Ein fokussiertes Reformer-Workout für Gesäß, Beine und Hüfte. Kontrollierte Bewegungen und gezielte Widerstände kräftigen die Muskulatur und sorgen für ein intensives Training des Unterkörpers.",
+        ctaBook: "Class buchen",
+      },
+      {
+        id: "core-reform",
+        name: "Core Reform",
+        forWho: "Fokus auf Core, Haltung und Kontrolle.",
+        description:
+          "Ein gezieltes Training für die tiefliegende Bauch-, Rücken- und Rumpfmuskulatur. Die Übungen verbessern Stabilität, Haltung und Körperkontrolle und stärken deine Mitte nachhaltig.",
+        ctaBook: "Class buchen",
+      },
+      {
+        id: "total-body-reform",
+        name: "Total Body Reform",
+        forWho: "Ganzkörpertraining für Kraft und Beweglichkeit.",
+        description:
+          "Ein ausgewogenes Ganzkörpertraining auf dem Reformer. Kraft, Mobilität, Koordination und Stabilität werden in einer fließenden Einheit miteinander verbunden.",
+        ctaBook: "Class buchen",
+      },
+      {
+        id: "jumpboard-reform",
+        name: "Jumpboard Reform",
+        forWho: "Dynamisch, intensiv und gelenkschonend.",
+        description:
+          "Ein dynamisches und gelenkschonendes Reformer-Workout mit Jumpboard. Die Einheit verbindet Cardio, Beinkraft und Koordination und sorgt für ein energiegeladenes Training.",
         ctaBook: "Class buchen",
       },
     ] as Array<{
@@ -118,7 +134,7 @@ export const siteContent = {
       ctaBook: string;
     }>,
     reformerNote:
-      "Neu auf dem Reformer? Dann starte mit der Reformer Intro. Wenn du bereits Erfahrung hast, melde dich gern direkt für eine Class an.",
+      "Neu auf dem Reformer? Dann starte mit New to Reformer. Wenn du bereits Erfahrung hast, melde dich gern direkt für eine Class an.",
   },
 
   /** How to book – 3 Schritte (inspiriert von Boutique-Studio-Flows) */
@@ -220,7 +236,7 @@ export const siteContent = {
     addressLine1: "Lagesche Str. 15a",
     addressLine2: "32657 Lemgo",
     emailLabel: "E-Mail",
-    email: "Lisa.kutschinski@web.de",
+    email: "lisa@thereformroom.de",
     mapCta: "Route in Google Maps öffnen",
     instagramLabel: "Instagram",
     instagramHandle: "@thereformroom", // [PLATZHALTER] finaler Handle von Lisa

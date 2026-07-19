@@ -3,22 +3,21 @@ import type { Config } from "tailwindcss";
 /**
  * THE REFORM ROOM — Brand Color Palette
  *
- * Abgeleitet aus dem Logo (warmes Sand-Beige, dunkles Espresso-Braun) und der
- * Studio-Stimmung (Olivgrün, Walnussholz, Bouclé, warmes Licht). Ruhig,
- * hochwertig, feminin, Boutique — bewusst weicher & wärmer als ein klassisches
- * Fitness-Template.
+ * Abgeleitet aus dem Logo (Cream #F8F4EC, Espresso #3C3028) und der warmen
+ * Studio-Fotografie. Eine einzige Farbwelt: Ivory → Linen → Sand → Cocoa.
+ * Ruhig, hochwertig, feminin, Boutique.
  *
  * Kern-Palette:
- *   Porcelain  #F7F2EA   Heller Cream-Hintergrund (Basis)
- *   Sand       #E7DDCD   Warmes Beige aus dem Logo (Sektionen, Karten)
- *   Almond     #D8C9B4   Weiches Sand-Mittel
- *   Clay       #C2AE95   Warmes Neutral
- *   Taupe      #A88E72   Erdiges Neutral / Linien
- *   Olive      #83835F   Ruhiger Grün-Akzent (Labels, Highlights)
- *   Sage       #9A9A7B   Helleres Oliv (Hover, dezente Flächen)
- *   Walnut     #6E5A47   Mittleres Holz-Braun
- *   Espresso   #3B3128   Dunkles Braun (Logo, Primärtext)
- *   Ink        #262019   Tiefes Braun-Schwarz (Dark-UI, Footer)
+ *   Porcelain  #F9F5ED   Warm Ivory / Soft Cream (Basis)
+ *   Sand       #EDE4D5   Linen / Soft Beige (Sektionen)
+ *   Almond     #E2D2BC   Weiches Warm-Beige
+ *   Clay       #CDB89A   Warmes Neutral
+ *   Taupe      #B39476   Light Taupe / Linien
+ *   Olive      #7A6B4C   Warmer Cocoa-Khaki-Akzent (Labels)
+ *   Sage       #A6977C   Helleres Soft Taupe
+ *   Walnut     #7A614C   Cocoa Brown (Button-Hover)
+ *   Espresso   #3C3028   Logo-Braun (Text, Buttons)
+ *   Ink        #32281F   Tiefes Warm Espresso (Dark-UI, Footer)
  *
  * Schriften:
  *   Cormorant Garamond → Überschriften / Display (elegant, high-contrast)
@@ -31,32 +30,32 @@ const config: Config = {
     extend: {
       colors: {
         // Core Brand Palette
-        porcelain: "#F7F2EA",
-        sand: "#E7DDCD",
-        almond: "#D8C9B4",
-        clay: "#C2AE95",
-        taupe: "#A88E72",
-        olive: "#6B6B47",
-        sage: "#9A9A7B",
-        walnut: "#6E5A47",
-        espresso: "#3B3128",
-        ink: "#262019",
+        porcelain: "#F9F5ED",
+        sand: "#EDE4D5",
+        almond: "#E2D2BC",
+        clay: "#CDB89A",
+        taupe: "#B39476",
+        olive: "#7A6B4C",
+        sage: "#A6977C",
+        walnut: "#7A614C",
+        espresso: "#3C3028",
+        ink: "#32281F",
 
         // Semantic mapping
-        background: "#F7F2EA",
-        foreground: "#3B3128",
-        card: "#EFE7DA",
-        "card-foreground": "#3B3128",
-        primary: "#6B6B47",
-        "primary-foreground": "#F7F2EA",
-        secondary: "#E7DDCD",
-        "secondary-foreground": "#3B3128",
-        muted: "#E7DDCD",
-        "muted-foreground": "#6B6B47",
-        accent: "#A88E72",
-        "accent-foreground": "#F7F2EA",
-        border: "rgba(59, 49, 40, 0.12)",
-        ring: "#6B6B47",
+        background: "#F9F5ED",
+        foreground: "#3C3028",
+        card: "#F5EFE5",
+        "card-foreground": "#3C3028",
+        primary: "#7A6B4C",
+        "primary-foreground": "#F9F5ED",
+        secondary: "#EDE4D5",
+        "secondary-foreground": "#3C3028",
+        muted: "#EDE4D5",
+        "muted-foreground": "#7A6B4C",
+        accent: "#B39476",
+        "accent-foreground": "#F9F5ED",
+        border: "rgba(60, 48, 40, 0.12)",
+        ring: "#7A6B4C",
       },
 
       fontFamily: {

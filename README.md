@@ -36,20 +36,38 @@ npm run build && npm run start
 | `BREVO_CONTACT_CONFIRM_TEMPLATE_ID` | „Anfrage erhalten"-Bestätigung (optional) |
 | `BREVO_NOTIFY_EMAIL` | Empfänger der Kontaktformular-Benachrichtigung (Lisa) |
 | `BREVO_SENDER_EMAIL` | Verifizierte Absender-Adresse in Brevo |
-| `NEXT_PUBLIC_LAUNCH_DATE` | Launch-Datum (ISO). Bis dahin **Coming-Soon**; danach automatisch aus. |
+| `NEXT_PUBLIC_LAUNCH_DATE` | Coming-Soon-Inhalte auf der öffentlichen Domain (ISO-Datum). |
+| `NEXT_PUBLIC_PRELAUNCH_GATE` | `true` = thereformroom.de nur Overlay; `false` = Go-Live. Preview immer offen. |
 
 > Ohne `BREVO_API_KEY` geben die Formular-Routen einen Fehler zurück (kein Versand). Die Website funktioniert ansonsten normal.
 
 ---
 
-## Coming-Soon (automatische Abschaltung)
+## Pre-Launch-Gate (Domain-basiert)
 
-Der Coming-Soon-Zustand wird zentral über `NEXT_PUBLIC_LAUNCH_DATE` gesteuert (`app/lib/launch.ts`):
+Während der Pre-Opening-Phase:
 
-- Datum **in der Zukunft** → Coming-Soon-Hero + Newsletter statt Buchung, Buchungsseite zeigt „bald live".
-- Datum **erreicht/leer** … genauer: erreicht → normale Buchungs-CTAs; **leer** → konservativ Coming-Soon (bis ein Datum gepflegt ist).
+| Domain | Ansicht |
+|---|---|
+| `thereformroom.de` / `www.thereformroom.de` | Nur Pre-Launch-Overlay (Warteliste) — Website nicht erreichbar |
+| `*.netlify.app` / `localhost` | Volle Website ohne Overlay (Team-Review) |
 
-Setze zum Launch einfach `NEXT_PUBLIC_LAUNCH_DATE` auf ein vergangenes/aktuelles Datum und deploye neu.
+Steuerung über `NEXT_PUBLIC_PRELAUNCH_GATE` (`app/lib/prelaunch-gate.ts` + `middleware.ts`):
+
+- **`true`** (Default) → Gate aktiv auf der öffentlichen Domain
+- **`false`** → Gate aus → volle Website live
+
+Zum Go-Live in Netlify `NEXT_PUBLIC_PRELAUNCH_GATE=false` setzen und neu deployen.
+
+Rechtliche Seiten (`/impressum`, `/datenschutz`, `/agb`) sowie APIs bleiben auch im Gate erreichbar.
+
+## Coming-Soon-Inhalte (Hero / Buchung)
+
+Zusätzlich steuert `NEXT_PUBLIC_LAUNCH_DATE` Coming-Soon-Inhalte auf der öffentlichen Domain (`app/lib/launch.ts`):
+
+- Datum **in der Zukunft** / **leer** → Newsletter statt Buchung im Hero, Buchungsseite „bald live"
+- Datum **erreicht** → normale Buchungs-CTAs
+- Auf Preview-Hosts immer volle Live-Ansicht (unabhängig vom Datum)
 
 ---
 
