@@ -98,7 +98,7 @@ const organizationSchema = {
   name: "The Reform Room",
   alternateName: "The Reform Room – Reformer Pilates Studio Lemgo",
   url: SITE_URL,
-  logo: `${SITE_URL}/logo/the-reform-room-stacked-espresso.png`,
+  logo: `${SITE_URL}/logo/the-reform-room-emblem-espresso.png`,
   image: `${SITE_URL}${OG_IMAGE.url}`,
   email: siteContent.studio.email,
   address: {

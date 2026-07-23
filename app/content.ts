@@ -20,7 +20,7 @@ export const siteContent = {
     street: "Lagesche Str. 15a",
     postalCode: "32657",
     city: "Lemgo",
-    email: "lisa@thereformroom.de",
+    email: "info@thereformroom.de",
     phone: "", // [PLATZHALTER] Telefonnummer von Lisa
   },
 
@@ -28,7 +28,7 @@ export const siteContent = {
   bookingUrl: "/buchen",
   loginUrl: `${CALUNIO_BASE}/auth/login?next=%2Fdashboard%2F`,
   calunioScriptSrc: `https://calunio.com/widget/${CALUNIO_TENANT}/embed.js`,
-  instagramUrl: "", // [PLATZHALTER] Instagram-Link von Lisa (z.B. https://www.instagram.com/thereformroom.lemgo) – Links erscheinen automatisch, sobald gesetzt
+  instagramUrl: "https://www.instagram.com/_thereformroom", // Handle von Lisa: _thereformroom
   googleMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Lagesche+Str.+15a,+32657+Lemgo",
 
@@ -89,7 +89,7 @@ export const siteContent = {
       {
         id: "new-to-reformer",
         name: "New to Reformer",
-        forWho: "Geeignet für Einsteiger und den ersten Studiobesuch.",
+        forWho: "Für Einsteiger",
         description:
           "Der ideale Einstieg für alle, die Reformer Pilates zum ersten Mal ausprobieren. Du lernst das Gerät, die wichtigsten Bewegungsabläufe und die grundlegende Technik in einem ruhigen und verständlichen Tempo kennen.",
         ctaBook: "Class buchen",
@@ -97,7 +97,7 @@ export const siteContent = {
       {
         id: "booty-reform",
         name: "Booty Reform",
-        forWho: "Fokus auf Glutes, Beine und Stabilität.",
+        forWho: "Glutes & Beine",
         description:
           "Ein fokussiertes Reformer-Workout für Gesäß, Beine und Hüfte. Kontrollierte Bewegungen und gezielte Widerstände kräftigen die Muskulatur und sorgen für ein intensives Training des Unterkörpers.",
         ctaBook: "Class buchen",
@@ -105,7 +105,7 @@ export const siteContent = {
       {
         id: "core-reform",
         name: "Core Reform",
-        forWho: "Fokus auf Core, Haltung und Kontrolle.",
+        forWho: "Core & Stabilität",
         description:
           "Ein gezieltes Training für die tiefliegende Bauch-, Rücken- und Rumpfmuskulatur. Die Übungen verbessern Stabilität, Haltung und Körperkontrolle und stärken deine Mitte nachhaltig.",
         ctaBook: "Class buchen",
@@ -113,7 +113,7 @@ export const siteContent = {
       {
         id: "total-body-reform",
         name: "Total Body Reform",
-        forWho: "Ganzkörpertraining für Kraft und Beweglichkeit.",
+        forWho: "Kraft & Beweglichkeit",
         description:
           "Ein ausgewogenes Ganzkörpertraining auf dem Reformer. Kraft, Mobilität, Koordination und Stabilität werden in einer fließenden Einheit miteinander verbunden.",
         ctaBook: "Class buchen",
@@ -121,7 +121,7 @@ export const siteContent = {
       {
         id: "jumpboard-reform",
         name: "Jumpboard Reform",
-        forWho: "Dynamisch, intensiv und gelenkschonend.",
+        forWho: "Cardio & Intensiv",
         description:
           "Ein dynamisches und gelenkschonendes Reformer-Workout mit Jumpboard. Die Einheit verbindet Cardio, Beinkraft und Koordination und sorgt für ein energiegeladenes Training.",
         ctaBook: "Class buchen",
@@ -140,25 +140,31 @@ export const siteContent = {
   /** How to book – 3 Schritte (inspiriert von Boutique-Studio-Flows) */
   howToBook: {
     eyebrow: "So einfach geht's",
-    heading: "In drei Schritten zu deiner Class.",
+    heading: "In vier Schritten zu deiner Class.",
     steps: [
       {
         step: "01",
-        title: "Konto erstellen",
+        title: "Class wählen",
         description:
-          "Registriere dich in unserem Buchungssystem – online im Browser oder ganz bequem über die App. Ohne Konto ist keine Buchung möglich.",
+          "Öffne den Kursplan, wähle deine Wunsch-Class und klick auf „Buchen“.",
       },
       {
         step: "02",
-        title: "Class wählen",
+        title: "Konto erstellen oder einloggen",
         description:
-          "Such dir im Kursplan deine Wunsch-Class aus und buche sie mit einem Einzelticket oder einem Paket. Ohne Reformer-Erfahrung startest du mit der Intro.",
+          "Beim ersten Mal legst du in Sekunden ein kostenloses Konto an – danach genügt der Login.",
       },
       {
         step: "03",
-        title: "Bestätigung & los",
+        title: "Paket oder Mitgliedschaft",
         description:
-          "Du bekommst eine Bestätigung per E-Mail. Vor deinem ersten Besuch senden wir dir alle wichtigen Infos rund um Anreise, Parken und Ablauf.",
+          "Wähle ein Paket oder eine Mitgliedschaft und bezahle sicher über unseren Zahlungsdienstleister.",
+      },
+      {
+        step: "04",
+        title: "Buchung bestätigen",
+        description:
+          "Bestätige nach dem Kauf noch deine Buchung und warte auf das Erfolgsfenster. Fertig – deine Bestätigung kommt per E-Mail.",
       },
     ] as Array<{ step: string; title: string; description: string }>,
   },
@@ -236,10 +242,10 @@ export const siteContent = {
     addressLine1: "Lagesche Str. 15a",
     addressLine2: "32657 Lemgo",
     emailLabel: "E-Mail",
-    email: "lisa@thereformroom.de",
+    email: "info@thereformroom.de",
     mapCta: "Route in Google Maps öffnen",
     instagramLabel: "Instagram",
-    instagramHandle: "@thereformroom", // [PLATZHALTER] finaler Handle von Lisa
+    instagramHandle: "@_thereformroom",
   },
 
   contactForm: {
@@ -294,7 +300,7 @@ export const siteContent = {
       {
         question: "Wie buche ich eine Class?",
         answer:
-          "Über unser Online-Buchungssystem: Konto erstellen, Class im Kursplan auswählen und mit Einzelticket oder Paket buchen. Ohne Registrierung ist keine Buchung möglich. Du erhältst anschließend eine Bestätigung per E-Mail.",
+          "Wähle im Kursplan deine Class und klick auf „Buchen“ – du gelangst in unser sicheres Buchungssystem. Beim ersten Mal legst du ein kostenloses Konto an (ohne Konto ist keine Buchung möglich), bestätigst die Buchung mit Einzelticket, Paket oder Mitgliedschaft und akzeptierst die Stornobedingungen. Anschließend erhältst du eine Bestätigung per E-Mail.",
       },
       {
         question: "Was soll ich mitbringen und anziehen?",
@@ -304,12 +310,17 @@ export const siteContent = {
       {
         question: "Wie groß sind die Gruppen?",
         answer:
-          "Wir trainieren bewusst in kleinen Gruppen. So bleibt genug Raum für individuelle Korrektur und ein Training, das wirklich zu dir passt.",
+          "Wir trainieren bewusst in kleinen Gruppen mit maximal 8 Plätzen pro Class. So bleibt genug Raum für individuelle Korrektur und ein Training, das wirklich zu dir passt.",
       },
       {
         question: "Wo befindet sich das Studio?",
         answer:
-          "The Reform Room liegt in der Lagesche Str. 15a, 32657 Lemgo – zentral und aus dem gesamten Kreis Lippe gut erreichbar.",
+          "The Reform Room liegt in der Lagesche Str. 15a, 32657 Lemgo, in der 3. Etage – zentral und aus dem gesamten Kreis Lippe gut erreichbar.",
+      },
+      {
+        question: "Gibt es Parkplätze?",
+        answer:
+          "Ja, Parkplätze sind vorhanden. So kommst du entspannt an und kannst dich ganz auf dein Training konzentrieren.",
       },
       {
         question: "Kann ich einen Gutschein verschenken?",

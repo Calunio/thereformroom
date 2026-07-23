@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function AgbPage() {
   return (
-    <LegalPage title="Allgemeine Geschäftsbedingungen" updated="19. Juli 2026">
+    <LegalPage title="Allgemeine Geschäftsbedingungen" updated="23. Juli 2026">
       <LegalH2>1. Geltungsbereich</LegalH2>
       <p>
         Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen The Reform
@@ -237,6 +237,17 @@ export default function AgbPage() {
         {studio.email}. Wurde die Leistung auf deinen ausdrücklichen Wunsch vor Ablauf der
         Widerrufsfrist vollständig erbracht, erlischt das Widerrufsrecht unter den gesetzlichen
         Voraussetzungen.
+      </p>
+      <p>
+        Wurde vor Ausübung des Widerrufsrechts bereits mit der Erbringung der Leistung begonnen
+        (z. B. wurden aus einem Credit-Paket oder einer Mitgliedschaft bereits einzelne Classes in
+        Anspruch genommen), schulden wir dir den bereits erhaltenen Betrag nur abzüglich eines
+        Wertersatzes für die bis zum Widerruf bereits genutzten Leistungen. Der Wertersatz bemisst
+        sich nach dem im Buchungssystem zum Zeitpunkt der jeweiligen Nutzung ausgewiesenen
+        regulären Einzelticket-Preis (Drop-in-Preis) der in Anspruch genommenen Class. Der sich
+        daraus ergebende Betrag wird von der Rückzahlung abgezogen. Dies gilt entsprechend, wenn
+        du ausdrücklich verlangt hast, dass wir bereits vor Ablauf der Widerrufsfrist mit der
+        Ausführung der Leistung beginnen.
       </p>
 
       <LegalH2>14. Datenschutz</LegalH2>

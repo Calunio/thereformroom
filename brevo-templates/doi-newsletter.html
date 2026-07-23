@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestätige deine Anmeldung</title>
+  <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+  <style>
+    body, table, td { font-family: Georgia, 'Times New Roman', serif; }
+    img { border: 0; display: block; }
+    a { color: #7A6B4C; }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#F9F5ED; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F9F5ED;">
+    <tr>
+      <td align="center" style="padding: 40px 16px;">
+
+        <!-- Card -->
+        <table role="presentation" width="520" cellpadding="0" cellspacing="0" style="max-width:520px; width:100%; background-color:#ffffff; border-radius:4px; overflow:hidden; box-shadow: 0 2px 16px rgba(60,48,40,0.08);">
+
+          <!-- Top accent bar -->
+          <tr>
+            <td style="height:4px; background-color:#7A6B4C; font-size:0; line-height:0;">&nbsp;</td>
+          </tr>
+
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding: 40px 40px 28px 40px;">
+              <a href="https://thereformroom.de" target="_blank" style="text-decoration:none;">
+                <img src="https://thereformroom.de/logo/the-reform-room-emblem-espresso.png" alt="The Reform Room" width="132" height="137" style="display:block; border:0; width:132px; max-width:132px; height:auto; margin:0 auto;" />
+              </a>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 40px;">
+              <div style="height:1px; background-color:#EDE4D5;"></div>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td style="padding: 32px 40px 16px 40px; font-family: Georgia, 'Times New Roman', serif;">
+              <h1 style="margin:0 0 18px 0; font-family: Georgia, 'Times New Roman', serif; font-size:24px; font-weight:400; color:#4B4233; line-height:1.3;">
+                {% if contact.NAME %}Schön, dass du dabei bist, {{ contact.NAME }}.{% elif contact.VORNAME %}Schön, dass du dabei bist, {{ contact.VORNAME }}.{% else %}Schön, dass du dabei bist.{% endif %}
+              </h1>
+              <p style="margin:0 0 8px 0; font-family: Arial, Helvetica, sans-serif; font-size:15px; line-height:1.7; color:#5C4E42;">
+                Nur noch ein Klick, dann bist du auf der Warteliste von The Reform Room.
+              </p>
+              <p style="margin:0 0 28px 0; font-family: Arial, Helvetica, sans-serif; font-size:15px; line-height:1.7; color:#5C4E42;">
+                Bestätige deine Anmeldung und erfahre als Erste, wann die ersten Reformer-Classes in Lemgo buchbar sind.
+              </p>
+            </td>
+          </tr>
+
+          <!-- CTA Button -->
+          <tr>
+            <td align="center" style="padding: 0 40px 32px 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center" style="background-color:#4B4233;">
+                    <a href="{{ doubleoptin }}" target="_blank" style="display:inline-block; padding:16px 44px; font-family: Arial, Helvetica, sans-serif; font-size:12px; font-weight:600; letter-spacing:3px; color:#F9F5ED; text-decoration:none; text-transform:uppercase;">
+                      Anmeldung bestätigen
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Secondary text -->
+          <tr>
+            <td style="padding: 0 40px 36px 40px;">
+              <p style="margin:0; font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:1.6; color:#B39476;">
+                Hast du dich nicht angemeldet? Dann ignoriere diese E-Mail einfach – es passiert nichts weiter.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 40px;">
+              <div style="height:1px; background-color:#EDE4D5;"></div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 24px 40px 32px 40px;">
+              <p style="margin:0 0 6px 0; font-family: Arial, Helvetica, sans-serif; font-size:11px; letter-spacing:3px; color:#B39476; text-transform:uppercase;">
+                The Reform Room
+              </p>
+              <p style="margin:0; font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#B39476; line-height:1.6;">
+                Lagesche Str. 15a &middot; 32657 Lemgo<br />
+                <a href="https://thereformroom.de" style="color:#7A6B4C; text-decoration:underline;">thereformroom.de</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Card -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

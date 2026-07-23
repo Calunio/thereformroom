@@ -80,13 +80,15 @@ Das Buchungssystem läuft über **Calunio** (Tenant-Slug in `app/content.ts` →
 ## Marke & Logo
 
 - Farben & Schriften: `tailwind.config.ts` + `app/globals.css` (Cormorant Garamond + Jost, beide lizenzfrei via Google Fonts).
-- Logo als React-Komponente: `app/components/Logo.tsx` (scharf, themebar).
-- **Standalone-Logodateien** (transparent, SVG + PNG, espresso & cream) unter `public/logo/`, erzeugt via:
+- Logo als React-Komponente: `app/components/Logo.tsx` (rendert das echte Marken-Emblem als SVG, Varianten `dark`/`light`, Größe via `className`).
+- **Marken-Emblem** aus Lisas Original-Logo: `public/logo/the-reform-room-emblem-{espresso,cream}.{svg,png,webp}` (hintergrundfrei, SVG = skalierbar, WebP = platzsparend). Quelle: `scripts/brand/reform-room-logo-source.png`. Neu erzeugen via:
 
 ```bash
-npm run generate:logo   # baut Logo aus Fonts als Vektor-Pfade → SVG + PNG + app/icon.svg
+npm run generate:brand-logo   # vektorisiert das Original → SVG + transparentes PNG + WebP (espresso & cream)
 npm run generate:favicon
 ```
+
+  Der ältere schriftbasierte Nachbau (`npm run generate:logo` → `*-stacked-*`/`*-wordmark-*`) bleibt als Fallback erhalten, wird aber nicht mehr eingebunden.
 
 ---
 

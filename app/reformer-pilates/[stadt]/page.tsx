@@ -274,15 +274,19 @@ export default async function ReformerPilatesStadtPage({
               </h2>
             </ScrollReveal>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {siteContent.courses.items.map((course) => (
               <article
                 key={course.id}
-                className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-8"
+                className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-5 lg:p-6"
               >
-                <p className="eyebrow text-olive mb-4">{course.forWho}</p>
-                <h3 className="font-display text-2xl text-espresso mb-4">{course.name}</h3>
-                <p className="text-espresso/65 leading-relaxed font-light">{course.description}</p>
+                <p className="eyebrow text-olive mb-3 text-[11px]">{course.forWho}</p>
+                <h3 className="font-display text-xl text-espresso mb-3 leading-tight">
+                  {course.name}
+                </h3>
+                <p className="text-espresso/65 text-sm leading-relaxed font-light">
+                  {course.description}
+                </p>
               </article>
             ))}
           </div>

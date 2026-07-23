@@ -86,7 +86,7 @@ export default async function Home() {
       <Hero comingSoon={comingSoon} />
 
       {/* ─── Courses ─── */}
-      <section id="kurse" className="py-24 lg:py-32 bg-porcelain scroll-mt-20">
+      <section id="kurse" className="py-24 lg:py-32 bg-sand scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="max-w-2xl mx-auto text-center mb-16">
             <ScrollReveal>
@@ -102,21 +102,23 @@ export default async function Home() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4">
             {courses.items.map((course, i) => (
               <ScrollReveal key={course.id} delay={0.1 + i * 0.08}>
-                <article className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-8 hover:border-taupe/35 transition-colors">
-                  <p className="eyebrow text-olive mb-4">{course.forWho}</p>
-                  <h3 className="font-display text-3xl text-espresso mb-4">{course.name}</h3>
-                  <p className="text-espresso/65 leading-relaxed font-light mb-8 flex-1">
+                <article className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-5 lg:p-6 hover:border-taupe/35 transition-colors">
+                  <p className="eyebrow text-olive mb-3 text-[11px]">{course.forWho}</p>
+                  <h3 className="font-display text-xl lg:text-2xl text-espresso mb-3 leading-tight">
+                    {course.name}
+                  </h3>
+                  <p className="text-espresso/65 text-sm leading-relaxed font-light mb-6 flex-1">
                     {course.description}
                   </p>
                   <Link
                     href={siteContent.bookingUrl}
-                    className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-espresso border-b border-espresso/30 pb-1 w-fit hover:border-espresso transition-colors"
+                    className="inline-flex items-center gap-1.5 text-[11px] tracking-[0.16em] uppercase text-espresso border-b border-espresso/30 pb-1 w-fit hover:border-espresso transition-colors"
                   >
                     {course.ctaBook}
-                    <ArrowRight size={14} strokeWidth={1.75} />
+                    <ArrowRight size={12} strokeWidth={1.75} />
                   </Link>
                 </article>
               </ScrollReveal>
@@ -132,7 +134,7 @@ export default async function Home() {
       </section>
 
       {/* ─── How to book ─── */}
-      <section className="py-20 lg:py-28 bg-sand">
+      <section className="py-20 lg:py-28 bg-porcelain">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <ScrollReveal>
@@ -144,7 +146,7 @@ export default async function Home() {
               </h2>
             </ScrollReveal>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-10">
             {howToBook.steps.map((step, i) => (
               <ScrollReveal key={step.step} delay={0.1 + i * 0.08}>
                 <div className="text-center md:text-left">

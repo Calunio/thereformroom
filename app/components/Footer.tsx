@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 lg:gap-12 mb-14">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" aria-label={c.logoAria} className="inline-block">
-              <Logo className="h-16 w-auto mb-6" variant="light" layout="stacked" />
+              <Logo className="h-20 w-auto mb-6" variant="light" />
             </Link>
             <p className="text-sm text-porcelain/50 leading-relaxed whitespace-pre-line font-light">
               {c.tagline}

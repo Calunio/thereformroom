@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function DatenschutzPage() {
   return (
-    <LegalPage title="Datenschutzerklärung" updated="19. Juli 2026">
+    <LegalPage title="Datenschutzerklärung" updated="23. Juli 2026">
       <LegalH2>1. Verantwortlicher</LegalH2>
       <p>
         Verantwortlich für die Datenverarbeitung auf dieser Website im Sinne der
@@ -251,7 +251,16 @@ export default function DatenschutzPage() {
         .
       </p>
 
-      <LegalH2>10. Externe Links (Google Maps)</LegalH2>
+      <LegalH2>10. Google Fonts</LegalH2>
+      <p>
+        Diese Website verwendet die Schriftarten Cormorant Garamond und Jost von Google Fonts.
+        Die Schriftdateien werden über Next.js zur Build-Zeit heruntergeladen und lokal von
+        unserem eigenen Server ausgeliefert (Self-Hosting). Beim Besuch dieser Website findet
+        keine Verbindung zu Servern von Google statt und es wird keine IP-Adresse an Google
+        übermittelt.
+      </p>
+
+      <LegalH2>11. Externe Links (Google Maps)</LegalH2>
       <p>
         Für die Anfahrt verlinken wir auf Google Maps. Es handelt sich um einen einfachen
         Textlink. Google-Maps-Inhalte werden nicht in unsere Website eingebettet und beim
@@ -259,7 +268,7 @@ export default function DatenschutzPage() {
         Google weitergeleitet; dort gelten die Datenschutzbestimmungen von Google.
       </p>
 
-      <LegalH2>11. Rechte der betroffenen Personen</LegalH2>
+      <LegalH2>12. Rechte der betroffenen Personen</LegalH2>
       <p>Du hast nach der DSGVO insbesondere folgende Rechte:</p>
       <ul className="list-disc pl-5 space-y-1">
         <li>
@@ -297,7 +306,7 @@ export default function DatenschutzPage() {
         Informationsfreiheit Nordrhein-Westfalen (LDI NRW).
       </p>
 
-      <LegalH2>12. Kontakt in Datenschutzfragen</LegalH2>
+      <LegalH2>13. Kontakt in Datenschutzfragen</LegalH2>
       <p>
         Bei Fragen zum Datenschutz oder zur Wahrnehmung deiner Rechte erreichst du uns unter:{" "}
         {studio.email}

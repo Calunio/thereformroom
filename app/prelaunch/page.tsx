@@ -30,15 +30,16 @@ export default function PrelaunchPage() {
           alt=""
           fill
           priority
+          quality={68}
           sizes="100vw"
           className="object-cover object-center animate-slow-pan"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/60 to-ink/90" />
-        <div className="absolute inset-0 bg-ink/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/40 to-ink/70" />
+        <div className="absolute inset-0 bg-ink/15" />
       </div>
 
       <header className="relative z-10 flex justify-center pt-10 px-6">
-        <Logo variant="light" layout="stacked" className="h-auto" />
+        <Logo variant="light" className="h-40 sm:h-52 w-auto" priority />
       </header>
 
       <main className="relative z-10 flex-1 flex items-center justify-center px-6 py-16">
@@ -88,15 +89,6 @@ export default function PrelaunchPage() {
             className="underline underline-offset-2 hover:text-porcelain transition-colors"
           >
             {footer.datenschutz}
-          </Link>
-          <span className="text-porcelain/20" aria-hidden>
-            |
-          </span>
-          <Link
-            href="/agb"
-            className="underline underline-offset-2 hover:text-porcelain transition-colors"
-          >
-            {footer.agb}
           </Link>
         </nav>
       </footer>

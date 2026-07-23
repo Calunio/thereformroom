@@ -29,7 +29,7 @@ const ROOT = join(__dirname, "..");
 const FONT_DIR = join(__dirname, "fonts");
 const OUT_DIR = join(ROOT, "public/logo");
 
-const ESPRESSO = "#3C3028";
+const ESPRESSO = "#4B4233";
 const CREAM = "#F9F5ED";
 
 const FONTS = {
