@@ -70,7 +70,8 @@ export function Navigation() {
           <div className="relative z-10 flex items-center gap-4">
             <Link href="/" aria-label={siteContent.nav.logoAria}>
               <Logo
-                className="h-12 w-auto transition-opacity duration-500"
+                layout="stacked"
+                className="text-[1.25rem] sm:text-[1.4rem] transition-opacity duration-500"
                 variant={showSolidNav ? "dark" : "light"}
                 priority
               />

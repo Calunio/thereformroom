@@ -116,7 +116,7 @@ export const CITIES: CityConfig[] = [
     driveInfo:
       "Über die B66 in etwa 15 Minuten nach Lemgo – eine ruhige Fahrt durchs Lipperland.",
     transitInfo:
-      "Bahnhaltepunkte der Extertalbahn und Busverbindungen führen Richtung Lemgo.",
+      "Busverbindungen führen Richtung Lemgo; vom Zentrum aus schnell weiter zum Studio.",
     metaDescription:
       "Reformer Pilates für Dörentrup: The Reform Room in Lemgo, in ca. 15 Min. erreichbar. Kleines Boutique-Studio mit persönlicher Betreuung.",
     driveMinutesDisplay: "15",
@@ -176,7 +176,7 @@ export const CITIES: CityConfig[] = [
     driveInfo:
       "Über die B66 in etwa 20 Minuten nach Lemgo – klare Strecke aus dem östlichen Lippe.",
     transitInfo:
-      "Extertalbahn und Busse verbinden Barntrup mit Lemgo; gut planbar für feste Termine.",
+      "Busse verbinden Barntrup mit Lemgo; gut planbar für feste Termine.",
     metaDescription:
       "Reformer Pilates für Barntrup: The Reform Room in Lemgo, in ca. 20 Min. über die B66. Persönliche Betreuung, kleine Gruppen, moderne Reformer.",
     driveMinutesDisplay: "20",
@@ -196,7 +196,7 @@ export const CITIES: CityConfig[] = [
     driveInfo:
       "Über die B238 / B66 in etwa 24 Minuten nach Lemgo – eine bewusste Fahrt für dein Training.",
     transitInfo:
-      "Die Extertalbahn und Busse verbinden die Ortsteile mit Lemgo; ideal für regelmäßige Kurse.",
+      "Busse verbinden die Ortsteile mit Lemgo; ideal für regelmäßige Kurse.",
     metaDescription:
       "Reformer Pilates für Extertal: The Reform Room in Lemgo, in ca. 24 Min. erreichbar. Kleines Boutique-Studio mit persönlicher Betreuung.",
     driveMinutesDisplay: "24",

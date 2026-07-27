@@ -4,7 +4,7 @@
 /* ============================================================
    THE REFORM ROOM — Brand Tokens
 
-   Abgeleitet aus dem Logo (Cream #F8F4EC · Espresso #4B4233)
+   Abgeleitet aus dem Logo (Cream #F9F5ED · Espresso #3B3128)
    und der warmen Studio-Fotografie. Eine einzige Farbwelt:
    warm, ruhig, hochwertig, feminin — Ivory → Sand → Cocoa.
 
@@ -17,7 +17,7 @@
    - Olive     #7A6B4C  (warmer Cocoa-Khaki-Akzent, Logo-Familie)
    - Sage      #A6977C  (helleres Soft Taupe)
    - Walnut    #7A614C  (Cocoa Brown — Buttons Hover)
-   - Espresso  #4B4233  (Logo-Braun — Primärtext, Buttons; per Colorpicker aus dem Original-Logo)
+   - Espresso  #3B3128  (Logo-Braun — Primärtext, Buttons; Wortmarke / Marken-Assets)
    - Ink       #32281F  (tiefes Warm Espresso — Dark-UI, Footer)
 
    Schriften:
@@ -34,7 +34,7 @@
   --olive: #7a6b4c;
   --sage: #a6977c;
   --walnut: #7a614c;
-  --espresso: #4b4233;
+  --espresso: #3b3128;
   --ink: #32281f;
 
   --background: var(--porcelain);
@@ -49,7 +49,7 @@
   --muted-foreground: var(--olive);
   --accent: var(--taupe);
   --accent-foreground: var(--porcelain);
-  --border: rgba(75, 66, 51, 0.12);
+  --border: rgba(59, 49, 40, 0.12);
   --ring: var(--olive);
 }
 
@@ -168,6 +168,15 @@ html {
 
 .animate-slow-pan {
   animation: slowPan 26s ease-in-out infinite;
+}
+
+/* ---- Prelaunch: helles Creme mit dezentem Schattenspiel ---- */
+.prelaunch-canvas {
+  background-color: var(--porcelain);
+  background-image:
+    radial-gradient(ellipse 85% 55% at 12% 8%, rgba(179, 148, 118, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 88% 72%, rgba(122, 97, 76, 0.1), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(59, 49, 40, 0.05), transparent 45%);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -261,43 +261,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ─── Studio image break ─── */}
-      <section className="relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative min-h-[45vh] lg:min-h-[80vh]">
-            <Image
-              src="/images/studio.webp"
-              alt="Der Trainingsraum von The Reform Room in Lemgo mit Reformer-Geräten"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="bg-walnut text-porcelain flex items-center">
-            <div className="px-8 py-16 lg:px-16 lg:py-24 max-w-xl">
-              <ScrollReveal>
-                <p className="eyebrow text-porcelain/60 mb-6">Der Raum</p>
-              </ScrollReveal>
-              <ScrollReveal delay={0.1}>
-                <h2 className="font-display font-light text-4xl md:text-5xl leading-tight mb-6">
-                  Ein Ort zum Ankommen.
-                </h2>
-              </ScrollReveal>
-              <ScrollReveal delay={0.2}>
-                <p className="text-porcelain/75 text-lg leading-relaxed font-light mb-4">
-                  Warmes Licht, natürliche Materialien und hochwertige Reformer – The Reform Room
-                  ist bewusst reduziert gestaltet. Ein Raum, der einlädt, den Kopf frei zu machen
-                  und ganz bei dir anzukommen.
-                </p>
-                <p className="text-porcelain/60 text-sm leading-relaxed font-light">
-                  Mitten in Lemgo · Lagesche Str. 15a
-                </p>
-              </ScrollReveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── About Lisa ─── */}
       <section id="ueber-mich" className="py-24 lg:py-32 bg-sand scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
@@ -327,9 +290,6 @@ export default async function Home() {
                   <p className="text-espresso/70 leading-relaxed font-light mb-4">{p}</p>
                 </ScrollReveal>
               ))}
-              <ScrollReveal delay={0.35}>
-                <p className="font-display text-2xl text-espresso mt-6">{about.signature}</p>
-              </ScrollReveal>
             </div>
           </div>
         </div>

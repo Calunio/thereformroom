@@ -1,28 +1,19 @@
 /**
- * The Reform Room — Marken-Emblem.
+ * The Reform Room — Logo
  *
- * Rendert Lisas Original-Logo als hintergrundfreies, skalierbares SVG (via
- * scripts/generate-brand-logo.mjs aus dem Original vektorisiert). Zwei
- * Farbvarianten:
- *   - "dark"  → Espresso (#4B4233) für helle Flächen (Nav solid).
- *   - "light" → Creme    (#F9F5ED) für dunkle Flächen (Footer, Prelaunch, Hero).
- *
- * Die Größe wird ausschließlich über `className` (z. B. h-12 w-auto) gesteuert.
- * `layout` bleibt aus API-Kompatibilität erhalten, beeinflusst das Emblem aber
- * nicht (das Motiv ist immer die runde Signatur).
+ * - layout="emblem"  → Lisas Original-Logo (SVG, generate:brand-logo)
+ * - layout="stacked"   → Wortmarke: „The“ über „Reform Room“ (Cormorant, currentColor)
  */
 import Image from "next/image";
 
 interface LogoProps {
   className?: string;
   variant?: "dark" | "light";
-  /** Nur noch für API-Kompatibilität; das Emblem ist immer die runde Signatur. */
-  layout?: "wordmark" | "stacked";
-  /** Für above-the-fold-Platzierungen (Nav, Prelaunch-Header). */
+  layout?: "emblem" | "stacked" | "wordmark";
   priority?: boolean;
 }
 
-const SRC = {
+const EMBLEM_SRC = {
   dark: "/logo/the-reform-room-emblem-espresso.svg",
   light: "/logo/the-reform-room-emblem-cream.svg",
 } as const;
@@ -30,17 +21,33 @@ const SRC = {
 export function Logo({
   className = "",
   variant = "dark",
+  layout = "stacked",
   priority = false,
 }: LogoProps) {
+  const color = variant === "light" ? "text-porcelain" : "text-espresso";
+
+  if (layout === "emblem") {
+    return (
+      <Image
+        src={EMBLEM_SRC[variant]}
+        alt="The Reform Room — Pilates Studio"
+        width={900}
+        height={936}
+        priority={priority}
+        unoptimized
+        className={className}
+      />
+    );
+  }
+
+  // Gestapelte Wortmarke (Navigation)
   return (
-    <Image
-      src={SRC[variant]}
-      alt="The Reform Room — Pilates Studio"
-      width={900}
-      height={936}
-      priority={priority}
-      unoptimized
-      className={className}
-    />
+    <span
+      className={`inline-flex flex-col items-center text-center font-display leading-[0.92] tracking-tight ${color} ${className}`}
+      aria-label="The Reform Room"
+    >
+      <span className="italic font-normal text-[0.82em] opacity-90">The</span>
+      <span className="font-medium text-[1em] -mt-0.5">Reform Room</span>
+    </span>
   );
 }

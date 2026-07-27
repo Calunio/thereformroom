@@ -35,7 +35,7 @@ export const siteContent = {
   hero: {
     eyebrow: "Reformer Pilates · Lemgo",
     title: "The Reform Room",
-    claim: "Strengthen your body.\nCalm your mind.",
+    claim: "Strong body.\nCalm mind.",
     subline:
       "Ein Boutique-Studio für Reformer Pilates in Lemgo. Präzises, achtsames Training in kleinen Gruppen – für ein Körpergefühl, das dich durch den Alltag trägt.",
     ctaBook: "Platz sichern",
@@ -45,8 +45,12 @@ export const siteContent = {
   comingSoon: {
     badge: "Coming Soon",
     line: "In Lemgo",
-    body: "The Reform Room eröffnet bald. Trag dich ein und erfahre als Erste, wann die ersten Classes buchbar sind.",
-    submit: "Jetzt eintragen",
+    bodyParagraphs: [
+      "Schon bald öffnen die Türen von The Reform Room.",
+      "Melde dich jetzt für unseren Newsletter an und erfahre als Erste*r, wann die Kursbuchung startet.",
+      "So verpasst du keinen Termin und kannst dir frühzeitig deinen Platz auf dem Reformer sichern.",
+    ],
+    submit: "Jetzt vormerken",
     trustHint: "Kostenlos & unverbindlich. Keine Werbung.",
   },
 
@@ -203,18 +207,18 @@ export const siteContent = {
     note: "Buchung, Pakete, Mitgliedschaften und Login laufen über unser sicheres Buchungssystem.",
   },
 
-  /** Über mich (Lisa) — [PLATZHALTER], Lisa liefert finalen Text */
   about: {
     eyebrow: "Über mich",
-    heading: "Hi, ich bin Lisa.",
+    heading: "Hallo, ich bin Lisa.",
     portraitAlt: "Lisa Kutschinski – Gründerin von The Reform Room",
     paragraphs: [
-      "The Reform Room ist mein Herzensprojekt. Ich habe in Lemgo einen Ort geschaffen, an dem sich Menschen bewusst bewegen, zur Ruhe kommen und Stärke aufbauen – körperlich wie mental.",
-      "Reformer Pilates hat für mich verändert, wie ich meinen Körper wahrnehme. Diese Verbindung aus Präzision, Atmung und Kraft möchte ich weitergeben: in kleinen Gruppen, mit echter Betreuung und ohne Hektik.",
-      "Ich freue mich darauf, dich im Reform Room kennenzulernen und dich auf deinem Weg zu begleiten.",
+      "Ich bin 35 Jahre alt, Mama von zwei Kindern und die Gründerin von The Reform Room.",
+      "Vor zwei Jahren habe ich Reformer Pilates für mich entdeckt – zunächst als Ausgleich zum Alltag. Schon nach den ersten Stunden war mir klar, dass es viel mehr ist als nur ein Workout. Reformer Pilates hat mir gezeigt, wie sich Kraft, Beweglichkeit und Achtsamkeit perfekt miteinander verbinden lassen.",
+      "Aus einem Hobby wurde eine Leidenschaft und aus der Leidenschaft ist schließlich der Traum entstanden, mein eigenes Studio zu eröffnen.",
+      "Mit The Reform Room möchte ich einen Ort schaffen, an dem du dich jederzeit willkommen fühlst – unabhängig von Alter, Erfahrung oder Fitnesslevel. Es soll ein Ort sein, an dem du den Alltag für einen Moment hinter dir lassen kannst, um neue Energie zu tanken und deinen Körper bewusst zu stärken.",
+      "Mir ist wichtig, dass du jede Stunde mit einem guten Gefühl verlässt: stärker, aufrechter und mit mehr Energie als zuvor.",
+      "Ich freue mich darauf, dich persönlich kennenzulernen und dich auf deiner Pilates-Reise zu begleiten.",
     ],
-    signature: "— Lisa Kutschinski, Gründerin",
-    placeholderNote: true,
   },
 
   /**

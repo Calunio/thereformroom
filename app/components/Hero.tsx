@@ -37,7 +37,7 @@ export function Hero({ comingSoon }: { comingSoon: boolean }) {
           </h1>
 
           <p className="mt-8 text-porcelain/85 text-base md:text-lg leading-relaxed max-w-xl mx-auto font-light animate-fade-in-up animation-delay-400">
-            {comingSoon ? cs.body : hero.subline}
+            {comingSoon ? cs.bodyParagraphs.join(" ") : hero.subline}
           </p>
 
           <div className="mt-8 animate-fade-in-up animation-delay-600">
