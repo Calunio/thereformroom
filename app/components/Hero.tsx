@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteContent } from "@/app/content";
+import { Logo } from "./Logo";
 import { NewsletterForm } from "./NewsletterForm";
 
 export function Hero({ comingSoon }: { comingSoon: boolean }) {
@@ -17,16 +18,23 @@ export function Hero({ comingSoon }: { comingSoon: boolean }) {
             sizes="100vw"
             className="object-cover object-center animate-slow-pan"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/55 to-ink/85" />
-          <div className="absolute inset-0 bg-ink/25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/20 to-ink/45" />
+          <div className="absolute inset-0 bg-ink/10" />
         </div>
 
         <div className="relative z-10 text-center text-porcelain px-6 max-w-3xl mx-auto pt-28 pb-12">
-          <p className="eyebrow text-porcelain mb-6 animate-fade-in-up drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
+          <Logo
+            variant="light"
+            layout="stacked"
+            className="text-[2.75rem] sm:text-[3.5rem] md:text-[4rem] mb-8 sm:mb-10 animate-fade-in-up drop-shadow-[0_1px_12px_rgba(0,0,0,0.25)]"
+            priority
+          />
+
+          <p className="eyebrow text-porcelain mb-6 animate-fade-in-up animation-delay-200 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
             {comingSoon ? `${cs.badge} · ${cs.line}` : hero.eyebrow}
           </p>
 
-          <h1 className="animate-fade-in-up animation-delay-200">
+          <h1 className="animate-fade-in-up animation-delay-400">
             <span className="sr-only">The Reform Room — Reformer Pilates Lemgo</span>
             <span
               aria-hidden
@@ -36,11 +44,11 @@ export function Hero({ comingSoon }: { comingSoon: boolean }) {
             </span>
           </h1>
 
-          <p className="mt-8 text-porcelain/85 text-base md:text-lg leading-relaxed max-w-xl mx-auto font-light animate-fade-in-up animation-delay-400">
+          <p className="mt-8 text-porcelain/85 text-base md:text-lg leading-relaxed max-w-xl mx-auto font-light animate-fade-in-up animation-delay-600">
             {comingSoon ? cs.bodyParagraphs.join(" ") : hero.subline}
           </p>
 
-          <div className="mt-8 animate-fade-in-up animation-delay-600">
+          <div className="mt-8 animate-fade-in-up animation-delay-800">
             {comingSoon ? (
               <div className="max-w-md mx-auto">
                 <NewsletterForm variant="dark" submitLabel={cs.submit} />

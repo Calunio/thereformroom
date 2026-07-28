@@ -67,7 +67,6 @@ export default async function Home() {
   const comingSoon = await isComingSoon();
   const {
     intro,
-    values,
     courses,
     howToBook,
     pricing,
@@ -227,37 +226,6 @@ export default async function Home() {
           <ScrollReveal delay={0.1}>
             <p className="text-espresso/70 text-lg leading-relaxed font-light">{intro.body}</p>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── Values ─── */}
-      <section className="py-20 lg:py-24 bg-sand">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="max-w-2xl mb-10">
-            <ScrollReveal>
-              <h2 className="font-display font-light text-espresso text-4xl md:text-5xl leading-tight">
-                {values.heading}
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <p className="mt-3 font-display font-light text-espresso/55 text-xl md:text-2xl leading-snug max-w-lg">
-                {values.subheading}
-              </p>
-            </ScrollReveal>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            {values.items.map((item, i) => (
-              <ScrollReveal key={item.title} delay={0.1 + i * 0.08}>
-                <div className="h-full">
-                  <span className="font-display text-3xl text-olive/60">0{i + 1}</span>
-                  <h3 className="font-display text-2xl md:text-3xl text-espresso mt-3 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-espresso/65 leading-relaxed font-light">{item.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
 

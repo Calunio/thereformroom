@@ -23,17 +23,19 @@ export default function PrelaunchPage() {
 
   return (
     <div className="relative min-h-[100svh] flex flex-col overflow-hidden bg-porcelain text-espresso prelaunch-canvas">
-      <header className="relative z-10 px-6 lg:px-12 pt-6 lg:pt-8">
-        <Logo
-          variant="dark"
-          layout="stacked"
-          className="text-[1.3rem] sm:text-[1.45rem]"
-          priority
-        />
-      </header>
-
       <main className="relative z-10 flex-1 flex items-center justify-center px-6 py-12 lg:py-16">
         <div className="text-center max-w-xl mx-auto w-full">
+          <Logo
+            variant="dark"
+            layout="stacked"
+            className="text-[2.75rem] sm:text-[3.5rem] md:text-[4rem] mb-8 sm:mb-10"
+            priority
+          />
+
+          <p className="eyebrow text-olive mb-6">
+            {cs.badge} · {cs.line}
+          </p>
+
           <h1>
             <span className="sr-only">The Reform Room — Reformer Pilates Lemgo</span>
             <span
