@@ -34,6 +34,7 @@ npm run build && npm run start
 | `BREVO_LIST_ID` | Brevo-Listen-ID für Newsletter |
 | `BREVO_DOI_TEMPLATE_ID` | Double-Opt-in-Template |
 | `BREVO_CONTACT_CONFIRM_TEMPLATE_ID` | „Anfrage erhalten"-Bestätigung (optional) |
+| `BREVO_OPENING_LIST_ID` | Optional: feste Liste für Gästeliste. Leer = wird automatisch angelegt |
 | `BREVO_NOTIFY_EMAIL` | Empfänger der Kontaktformular-Benachrichtigung (Lisa) |
 | `BREVO_SENDER_EMAIL` | Verifizierte Absender-Adresse in Brevo |
 | `NEXT_PUBLIC_LAUNCH_DATE` | Coming-Soon-Inhalte auf der öffentlichen Domain (ISO-Datum). |

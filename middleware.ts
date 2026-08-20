@@ -16,6 +16,7 @@ const PASSTHROUGH_EXACT = new Set([
   "/datenschutz",
   "/agb",
   "/newsletter/bestaetigt",
+  "/opening",
   "/favicon.ico",
   "/robots.txt",
   "/sitemap.xml",
