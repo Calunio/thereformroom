@@ -14,7 +14,11 @@ export const metadata: Metadata = {
 
 export default function AgbPage() {
   return (
-    <LegalPage title="Allgemeine Geschäftsbedingungen (AGB)" updated="September 2026">
+    <LegalPage
+      title={"Allgemeine Geschäftsbedingungen\u00A0(AGB)"}
+      titleClassName="text-[1.7rem] sm:text-[1.85rem] md:text-[2rem] lg:text-[2.05rem] tracking-tight sm:whitespace-nowrap"
+      updated="September 2026"
+    >
       <p className="text-espresso/60">{studio.name}</p>
 
       <LegalH2>§ 1 Geltungsbereich und Vertragspartnerin</LegalH2>

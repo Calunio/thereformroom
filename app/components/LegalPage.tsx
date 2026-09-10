@@ -6,17 +6,23 @@ export function LegalPage({
   title,
   updated,
   children,
+  titleClassName = "",
 }: {
   title: string;
   updated?: string;
   children: React.ReactNode;
+  titleClassName?: string;
 }) {
   return (
     <div className="min-h-screen bg-porcelain flex flex-col">
       <Navigation />
       <main className="flex-1 pt-32 pb-24 lg:pt-40">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
-          <h1 className="font-display font-light text-espresso text-4xl md:text-5xl mb-3">{title}</h1>
+          <h1
+            className={`font-display font-light text-espresso text-4xl md:text-5xl mb-3 ${titleClassName}`}
+          >
+            {title}
+          </h1>
           {updated && <p className="text-sm text-espresso/45 mb-10">Stand: {updated}</p>}
           <div className="legal-prose text-espresso/75 font-light leading-relaxed space-y-4">
             {children}
