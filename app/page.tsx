@@ -102,7 +102,7 @@ export default async function Home() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4">
             {courses.items.map((course, i) => (
               <ScrollReveal key={course.id} delay={0.1 + i * 0.08}>
                 <article className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-5 lg:p-6 hover:border-taupe/35 transition-colors">

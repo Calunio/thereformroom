@@ -115,14 +115,6 @@ export const siteContent = {
         ctaBook: "Class buchen",
       },
       {
-        id: "total-body-reform",
-        name: "Total Body Reform",
-        forWho: "Kraft & Beweglichkeit",
-        description:
-          "Ein ausgewogenes Ganzkörpertraining auf dem Reformer. Kraft, Mobilität, Koordination und Stabilität werden in einer fließenden Einheit miteinander verbunden.",
-        ctaBook: "Class buchen",
-      },
-      {
         id: "jumpboard-reform",
         name: "Jumpboard Reform",
         forWho: "Cardio & Intensiv",
