@@ -173,6 +173,12 @@ export const siteContent = {
       "Ob einmal reinschnuppern oder regelmäßig trainieren – finde das Modell, das zu deinem Leben passt. Mitgliedschaften und Class Packs siehst du live aus dem Buchungssystem.",
     ctaBook: "Zum Kursplan",
     note: "Kauf und Login öffnen bei Calunio. Special Offer und Experience gelten bis zum 17. Oktober 2026.",
+    memberships: {
+      heading: "Mitgliedschaften",
+    },
+    packages: {
+      heading: "Pakete & Credits",
+    },
     giftcards: {
       eyebrow: "Verschenken",
       heading: "Gutscheine",

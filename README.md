@@ -74,7 +74,7 @@ Zusätzlich steuert `NEXT_PUBLIC_LAUNCH_DATE` Coming-Soon-Inhalte auf der öffen
 
 ## Buchung (Calunio-Widget)
 
-Das Buchungssystem läuft über **Calunio** (Tenant-Slug `thereformroom`). Kursplan: `CalunioWidget` auf `/buchen`. Preise: `CalunioPricing` (`pricing` + `giftcards`) auf `/preise` und im Startseiten-Block `#preise`. Ein Script pro Seite (`embed.js`), kein iFrame, keine lokal hinterlegten Preise. Checkout öffnet auf `https://thereformroom.calunio.com`.
+Das Buchungssystem läuft über **Calunio** (Tenant-Slug `thereformroom`). Kursplan: `CalunioWidget` auf `/buchen`. Preise: `CalunioPricing` mit getrennten Widgets (`memberships`, `packages`, `giftcards`) auf `/preise` und im Startseiten-Block `#preise`. Ein Script pro Seite (`embed.js`), kein iFrame, keine lokal hinterlegten Preise. Checkout öffnet auf `https://thereformroom.calunio.com`.
 
 ---
 
