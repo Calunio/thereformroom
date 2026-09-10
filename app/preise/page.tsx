@@ -10,7 +10,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thereformroom.de";
 export const metadata: Metadata = {
   title: "Preise & Pakete | The Reform Room Lemgo",
   description:
-    "Mitgliedschaften, Class Packs und Special Offers von The Reform Room in Lemgo – aktuelle Preise direkt aus dem Buchungssystem.",
+    "Mitgliedschaften, Class Packs, Special Offers und Gutscheine von The Reform Room in Lemgo – aktuelle Preise direkt aus dem Buchungssystem.",
   alternates: { canonical: `${SITE_URL}/preise` },
 };
 
