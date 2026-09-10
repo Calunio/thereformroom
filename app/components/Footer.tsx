@@ -67,8 +67,8 @@ export function Footer() {
             <nav className="flex flex-col gap-y-1.5 text-sm text-porcelain/50 font-light">
               {c.nav.map((link) => (
                 <Link
-                  key={link.hash}
-                  href={`/#${link.hash}`}
+                  key={link.label}
+                  href={link.href ?? `/#${link.hash}`}
                   className="hover:text-porcelain transition-colors w-fit"
                 >
                   {link.label}

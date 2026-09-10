@@ -292,7 +292,7 @@ export default async function ReformerPilatesStadtPage({
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/#preise"
+              href="/preise"
               className="inline-block border border-espresso/70 text-espresso px-10 py-3.5 text-xs tracking-[0.2em] uppercase hover:bg-espresso hover:text-porcelain transition-all duration-300"
             >
               Preise ansehen

@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/kursplan", destination: "/#kurse", permanent: false },
-      { source: "/preise", destination: "/#preise", permanent: false },
       { source: "/kontakt", destination: "/#kontakt", permanent: false },
       { source: "/ueber-mich", destination: "/#ueber-mich", permanent: false },
       { source: "/faq", destination: "/#faq", permanent: false },

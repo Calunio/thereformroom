@@ -60,7 +60,7 @@ Steuerung über `NEXT_PUBLIC_PRELAUNCH_GATE` (`app/lib/prelaunch-gate.ts` + `mid
 
 Zum Go-Live in Netlify `NEXT_PUBLIC_PRELAUNCH_GATE=false` setzen und neu deployen.
 
-Rechtliche Seiten (`/impressum`, `/datenschutz`, `/agb`) sowie APIs bleiben auch im Gate erreichbar.
+Rechtliche Seiten (`/impressum`, `/datenschutz`, `/agb`), die Preis-Seite (`/preise`) sowie APIs bleiben auch im Gate erreichbar.
 
 ## Coming-Soon-Inhalte (Hero / Buchung)
 
@@ -74,7 +74,7 @@ Zusätzlich steuert `NEXT_PUBLIC_LAUNCH_DATE` Coming-Soon-Inhalte auf der öffen
 
 ## Buchung (Calunio-Widget)
 
-Das Buchungssystem läuft über **Calunio** (Tenant-Slug in `app/content.ts` → `CALUNIO_TENANT`, aktuell Platzhalter `thereformroom`). Eingebunden über `app/components/CalunioWidget.tsx`. Login/Preise/Pakete/Mitgliedschaften laufen über das Widget, kein eigener Auth-Stack. Slug & Produkt-IDs beim Kick-off final bestätigen.
+Das Buchungssystem läuft über **Calunio** (Tenant-Slug `thereformroom`). Kursplan: `CalunioWidget` auf `/buchen`. Preise: `CalunioPricing` (`data-calunio-widget="pricing"`) auf `/preise` und im Startseiten-Block `#preise`. Ein Script pro Seite (`embed.js`), kein iFrame, keine lokal hinterlegten Preise. Checkout öffnet auf `https://thereformroom.calunio.com`.
 
 ---
 
@@ -126,9 +126,8 @@ npm run generate:og
 Alle mit `[PLATZHALTER]` bzw. hervorgehobenen Markierungen versehenen Stellen von Lisa/vor Launch klären:
 
 - Finale **Texte** (Über mich, Kursnamen), **echte Fotos**, **Instagram-Link**, **Telefonnummer**.
-- **Preise/Pakete** über Calunio.
 - **Rechtstexte** (Impressum/Datenschutz/AGB) juristisch prüfen & freigeben.
-- Calunio-Tenant-Slug & Produkt-IDs, Brevo-Templates, GA4-ID, Domain/DNS.
+- Brevo-Templates, GA4-ID, Domain/DNS.
 
 ---
 

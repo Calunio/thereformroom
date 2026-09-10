@@ -183,3 +183,14 @@ html {
   .animate-fade-in-up { animation: none; opacity: 1; }
   .animate-slow-pan { animation: none; }
 }
+
+/* Calunio-Widgets: Layout nur, Farben kommen vom Tenant */
+.calunio-pricing,
+[data-calunio-widget] {
+  width: 100%;
+  overflow: visible;
+}
+
+.calunio-pricing {
+  min-height: 280px;
+}

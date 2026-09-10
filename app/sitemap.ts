@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const main: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, lastModified, changeFrequency: "weekly", priority: 1.0 },
     { url: `${SITE_URL}/buchen`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${SITE_URL}/preise`, lastModified, changeFrequency: "weekly", priority: 0.8 },
   ];
 
   const legal: MetadataRoute.Sitemap = [

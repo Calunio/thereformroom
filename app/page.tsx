@@ -11,6 +11,7 @@ import { FAQSection } from "@/app/components/FAQSection";
 import { ContactForm } from "@/app/components/ContactForm";
 import { NewsletterForm } from "@/app/components/NewsletterForm";
 import { InstagramIcon } from "@/app/components/Icons";
+import { CalunioPricing } from "@/app/components/CalunioPricing";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thereformroom.de";
 
@@ -186,20 +187,7 @@ export default async function Home() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {pricing.cards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={0.1 + i * 0.08}>
-                <div className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-8 text-center hover:border-taupe/35 transition-colors">
-                  <p className="eyebrow text-olive mb-4">{card.badge}</p>
-                  <h3 className="font-display text-3xl text-espresso mb-4">{card.title}</h3>
-                  <p className="text-espresso/65 leading-relaxed font-light mb-6 flex-1">
-                    {card.description}
-                  </p>
-                  <p className="text-xs tracking-[0.15em] uppercase text-olive">{card.priceHint}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <CalunioPricing />
 
           <ScrollReveal delay={0.25}>
             <div className="text-center mt-12">

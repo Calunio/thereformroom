@@ -173,38 +173,14 @@ export const siteContent = {
     ] as Array<{ step: string; title: string; description: string }>,
   },
 
-  /** Preise & Pakete — Buchung/Preise laufen über das Calunio-Widget */
+  /** Preise & Pakete — Beträge kommen live aus dem Calunio-Widget, nicht aus Texten. */
   pricing: {
     eyebrow: "Preise & Pakete",
     heading: "Dein Weg in den Reform Room.",
     subheading:
-      "Ob einmal reinschnuppern oder regelmäßig trainieren – finde das Modell, das zu deinem Leben passt. Alle aktuellen Preise, Pakete und Mitgliedschaften findest du direkt im Buchungssystem.",
-    // [PLATZHALTER] Konkrete Preise kommen aus Calunio / von Lisa.
-    cards: [
-      {
-        badge: "Zum Reinschnuppern",
-        title: "Reformer Intro",
-        description:
-          "Dein vergünstigter Einstieg auf dem Reformer – lerne das Gerät und die Basics in einer geführten Intro-Class kennen.",
-        priceHint: "Einmaliger Einstiegspreis",
-      },
-      {
-        badge: "Flexibel",
-        title: "Einzelticket & Pakete",
-        description:
-          "Buche einzelne Classes oder sichere dir ein Credit-Paket für mehr Flexibilität – ideal, wenn du deinen Rhythmus selbst bestimmen möchtest.",
-        priceHint: "Ohne Bindung buchbar",
-      },
-      {
-        badge: "Für Regelmäßige",
-        title: "Mitgliedschaft",
-        description:
-          "Trainiere regelmäßig zum besten Preis. Deine feste Praxis im Reform Room – mit monatlichem Kontingent.",
-        priceHint: "Bester Preis pro Class",
-      },
-    ] as Array<{ badge: string; title: string; description: string; priceHint: string }>,
-    ctaBook: "Preise & Buchung ansehen",
-    note: "Buchung, Pakete, Mitgliedschaften und Login laufen über unser sicheres Buchungssystem.",
+      "Ob einmal reinschnuppern oder regelmäßig trainieren – finde das Modell, das zu deinem Leben passt. Mitgliedschaften und Class Packs siehst du live aus dem Buchungssystem.",
+    ctaBook: "Zum Kursplan",
+    note: "Kauf und Login öffnen bei Calunio. Special Offer und Experience gelten bis zum 17. Oktober 2026.",
   },
 
   about: {
@@ -358,17 +334,17 @@ export const siteContent = {
     logoAria: "The Reform Room – zur Startseite",
     nav: [
       { hash: "kurse", label: "Classes" },
-      { hash: "preise", label: "Preise" },
+      { href: "/preise", label: "Preise" },
       { hash: "ueber-mich", label: "Über mich" },
       { hash: "faq", label: "FAQ" },
       { hash: "kontakt", label: "Kontakt" },
-    ] as Array<{ hash: string; label: string }>,
+    ] as Array<{ hash?: string; href?: string; label: string }>,
   },
 
   nav: {
     links: [
       { hash: "kurse", label: "Classes" },
-      { hash: "preise", label: "Preise" },
+      { href: "/preise", label: "Preise" },
       { hash: "ueber-mich", label: "Über mich" },
       { hash: "faq", label: "FAQ" },
       { hash: "kontakt", label: "Kontakt" },
@@ -376,7 +352,7 @@ export const siteContent = {
     linksLanding: [
       { href: "/#kurse", label: "Classes" },
       { hash: "erreichbarkeit", label: "Anreise" },
-      { href: "/#preise", label: "Preise" },
+      { href: "/preise", label: "Preise" },
       { href: "/#faq", label: "FAQ" },
       { href: "/#kontakt", label: "Kontakt" },
     ] as Array<{ hash?: string; href?: string; label: string }>,
