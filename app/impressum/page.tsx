@@ -27,6 +27,12 @@ export default function ImpressumPage() {
         {studio.postalCode} {studio.city}
       </p>
 
+      <LegalH2>Rechtsform</LegalH2>
+      <p>Einzelunternehmen</p>
+
+      <LegalH2>Geschäftsbezeichnung</LegalH2>
+      <p>{studio.name}</p>
+
       <LegalH2>Kontakt</LegalH2>
       <p>E-Mail: {studio.email}</p>
 

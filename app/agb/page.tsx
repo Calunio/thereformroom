@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteContent } from "@/app/content";
-import { LegalPage, LegalH2 } from "@/app/components/LegalPage";
+import { LegalPage, LegalH2, LegalH3 } from "@/app/components/LegalPage";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://thereformroom.de";
 const { studio } = siteContent;
@@ -26,7 +26,7 @@ export default function AgbPage() {
         Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen The Reform Room
         und dem Kunden über die Buchung und Nutzung der angebotenen Leistungen. Hierzu zählen
         insbesondere Reformer-Pilates-Kurse, Special Offers, Events, Credits, Credit-Pakete,
-        Abonnements sowie sonstige Leistungen.
+        Abonnements, Gutscheine sowie sonstige Leistungen.
       </p>
       <p>
         The Reform Room wird betrieben von {studio.owner}, {studio.street}, {studio.postalCode}{" "}
@@ -69,21 +69,97 @@ export default function AgbPage() {
         überprüfen und gegebenenfalls korrigieren.
       </p>
 
-      <LegalH2>§ 3 Widerrufsrecht</LegalH2>
+      <LegalH2 id="widerruf">§ 3 Widerrufsrecht</LegalH2>
       <p>
-        Verbrauchern steht grundsätzlich ein gesetzliches Widerrufsrecht zu. Soweit ein
-        Widerrufsrecht besteht, wird der Kunde hierüber gesondert informiert.
+        Verbrauchern steht bei online geschlossenen Verträgen grundsätzlich ein gesetzliches
+        Widerrufsrecht zu. Nachfolgend informieren wir über dieses Recht und seine Ausübung.
+      </p>
+
+      <LegalH3>Widerrufsbelehrung</LegalH3>
+      <p>
+        <strong>Widerrufsrecht:</strong> Sie haben das Recht, binnen vierzehn Tagen ohne Angabe
+        von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab
+        dem Tag des Vertragsschlusses.
       </p>
       <p>
+        <strong>Ausübung des Widerrufs:</strong> Um Ihr Widerrufsrecht auszuüben, müssen Sie uns
+      </p>
+      <p>
+        {studio.name} ({studio.owner})
+        <br />
+        {studio.street}
+        <br />
+        {studio.postalCode} {studio.city}
+        <br />
+        E-Mail: {studio.email}
+      </p>
+      <p>
+        mittels einer eindeutigen Erklärung (z.&nbsp;B. per E-Mail) über Ihren Entschluss, diesen
+        Vertrag zu widerrufen, informieren. Sie können dafür das untenstehende
+        Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Alternativ können
+        Sie den Widerruf — sofern im jeweiligen Vertrag vorgesehen — auch über die
+        Widerrufsfunktion im Kundenkonto des Buchungssystems Calunio ausüben.
+      </p>
+      <p>
+        <strong>Widerrufsfrist:</strong> Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie
+        die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist
+        absenden.
+      </p>
+
+      <LegalH3>Folgen des Widerrufs</LegalH3>
+      <p>
+        Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen
+        erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag
+        zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf bei uns eingegangen ist. Für
+        diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen
+        Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes
+        vereinbart.
+      </p>
+      <p>
+        <strong>Wertersatz bei genutzten Leistungen:</strong> Haben Sie im Rahmen einer
+        Mitgliedschaft, eines Credit-Pakets oder eines vergleichbaren Angebots bereits
+        Leistungen wahrgenommen und widerrufen Sie den Vertrag innerhalb der Widerrufsfrist,
+        werden die bereits genutzten Einheiten mit dem jeweils gültigen Preis einer
+        vergleichbaren Einzelbuchung (Drop-in) verrechnet, der zum Zeitpunkt der Nutzung im
+        Buchungssystem ausgewiesen ist. Der sich daraus ergebende Betrag wird von der
+        Rückzahlung abgezogen. Entsprechendes gilt, wenn Sie ausdrücklich verlangt haben, dass
+        wir während der Widerrufsfrist mit der Leistungserbringung beginnen und Sie Ihr
+        Widerrufsrecht danach ausüben.
+      </p>
+
+      <LegalH3>Ausschluss des Widerrufsrechts</LegalH3>
+      <p>
         Für Dienstleistungen im Zusammenhang mit Freizeitbetätigungen, die zu einem bestimmten
-        Termin oder innerhalb eines bestimmten Zeitraums erbracht werden, kann das Widerrufsrecht
-        gemäß § 312g Abs. 2 Nr. 9 BGB ausgeschlossen sein. Dies betrifft insbesondere fest
-        gebuchte Kurse, Specials und Events.
+        Termin oder innerhalb eines bestimmten Zeitraums erbracht werden, besteht gemäß §&nbsp;312g
+        Abs.&nbsp;2 Nr.&nbsp;9 BGB kein Widerrufsrecht. Dies betrifft insbesondere fest gebuchte
+        Kurse, Specials, Events und vergleichbare Termine.
       </p>
       <p>
         Soweit das Widerrufsrecht gesetzlich ausgeschlossen ist, bleibt die Möglichkeit einer
         Stornierung nach den Regelungen in § 6 unberührt.
       </p>
+
+      <LegalH3>Muster-Widerrufsformular</LegalH3>
+      <p className="text-espresso/55 text-sm italic">
+        (Wenn Sie den Vertrag widerrufen wollen, füllen Sie bitte dieses Formular aus und senden
+        Sie es zurück.)
+      </p>
+      <div className="mt-3 p-4 bg-espresso/5 border border-espresso/10 text-sm space-y-2">
+        <p>
+          An {studio.name} ({studio.owner}), {studio.street}, {studio.postalCode} {studio.city},
+          E-Mail: {studio.email}:
+        </p>
+        <p>
+          Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den
+          Kauf der folgenden Waren (*) / die Erbringung der folgenden Dienstleistung (*)
+        </p>
+        <p>Bestellt am (*) / erhalten am (*)</p>
+        <p>Name des/der Verbraucher(s)</p>
+        <p>Anschrift des/der Verbraucher(s)</p>
+        <p>Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier)</p>
+        <p>Datum</p>
+        <p className="text-espresso/50">(*) Unzutreffendes streichen.</p>
+      </div>
 
       <LegalH2>§ 4 Preise und Zahlung</LegalH2>
       <p>
@@ -92,6 +168,16 @@ export default function AgbPage() {
         gesetzlichen Mehrwertsteuer.
       </p>
       <p>Die verfügbaren Zahlungsmethoden werden dem Kunden während des Buchungsvorgangs angezeigt.</p>
+      <p>
+        Wird eine vom Kunden erteilte SEPA-Lastschrift nicht eingelöst oder zurückgegeben und hat
+        der Kunde dies zu vertreten (insbesondere fehlende Kontodeckung, Widerspruch gegen die
+        Lastschrift oder unrichtige Kontodaten), kann die Anbieterin den dadurch entstandenen
+        Schaden pauschal mit 4,00&nbsp;€ geltend machen. Der Pauschale liegen die regelmäßig
+        entstehenden Bank- und Zahlungsdienstleisterkosten einer Rücklastschrift zugrunde. Dem
+        Kunden bleibt der Nachweis vorbehalten, dass ein Schaden nicht oder wesentlich niedriger
+        entstanden ist. Die Anbieterin bleibt berechtigt, einen höheren Schaden nachzuweisen.
+        Der vereinbarte Leistungspreis bleibt daneben geschuldet.
+      </p>
       <p>
         Eine Teilnahme kann je nach Angebot über eine Einzelbuchung, Credits, Credit-Pakete, ein
         Abonnement oder ein anderes Buchungsmodell erfolgen.
@@ -103,7 +189,21 @@ export default function AgbPage() {
       <p>
         Credits, Credit-Pakete, Buchungen, Abonnements und sonstige Teilnahmeberechtigungen sind
         persönlich und nicht übertragbar. Eine Weitergabe oder Nutzung durch andere Personen ist
-        nicht gestattet.
+        nicht gestattet. Für Gutscheine gilt die abweichende Regelung in den nachfolgenden
+        Absätzen.
+      </p>
+      <p>
+        Gutscheine können über das Buchungssystem Calunio erworben und an Dritte weitergegeben
+        werden. Der Erwerb zum Verschenken ist zulässig. Die Einlösung erfolgt durch die
+        einlösende Person im Buchungssystem. Mit der Einlösung gelten für die eingelöste
+        Leistung die übrigen Bestimmungen dieser AGB, einschließlich der Regelungen zu Buchung,
+        Stornierung und Teilnahme.
+      </p>
+      <p>
+        Gutscheine sind nicht in bar auszahlbar. Eine Erstattung erfolgt nur, soweit gesetzlich
+        vorgeschrieben, insbesondere im Rahmen eines wirksamen Widerrufs. Gültigkeit und
+        einlösbare Leistungen ergeben sich aus der jeweiligen Angebotsbeschreibung zum Zeitpunkt
+        des Kaufs.
       </p>
       <p>
         Credits müssen innerhalb ihrer jeweiligen Gültigkeitsdauer genutzt werden. Nach Ablauf der
@@ -167,6 +267,11 @@ export default function AgbPage() {
         Bei einer späteren Stornierung oder bei Nichterscheinen gilt die Buchung als Late
         Cancellation beziehungsweise No-Show. Der eingesetzte Credit verfällt in diesem Fall und
         wird nicht erstattet.
+      </p>
+      <p>
+        Dem Kunden bleibt der Nachweis gestattet, dass der Anbieterin kein Schaden oder ein
+        wesentlich geringerer Schaden entstanden ist. Weitergehende gesetzliche Rechte bleiben
+        unberührt.
       </p>
       <p>
         Dies gilt auch bei kurzfristiger Verhinderung aus persönlichen Gründen, wegen einer
@@ -263,7 +368,8 @@ export default function AgbPage() {
       </p>
       <p>
         Alle Buchungen, Credits und sonstigen Teilnahmeberechtigungen sind ausschließlich für den
-        registrierten Kunden bestimmt und nicht übertragbar.
+        registrierten Kunden bestimmt und nicht übertragbar. Hiervon ausgenommen sind Gutscheine
+        nach § 4.
       </p>
 
       <LegalH2>§ 11 Foto- und Videoaufnahmen</LegalH2>

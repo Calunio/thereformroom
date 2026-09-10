@@ -1,19 +1,15 @@
 /**
- * Zentraler Cookie-Consent-State (DSGVO).
+ * Cookie-Hinweis (DSGVO / TDDDG).
  *
- * Kategorien:
- *  - essential:  immer an (kein Toggle)
- *  - analytics:  GA4
- *  - marketing:  Meta/TikTok Pixel etc. (vorbereitet, noch nicht aktiv)
+ * Derzeit nur technisch notwendige Speicherung. Analyse- und Marketing-Cookies
+ * sind nicht aktiv; die Felder bleiben vorbereitet, falls später GA4 o. ä.
+ * ergänzt wird.
  *
  * Speicherformat in localStorage:
- *  trr_consent = JSON.stringify({ analytics: true, marketing: false, ts: 1712345678901 })
- *
- * "ts" = Zeitpunkt der letzten Entscheidung — für das 24-h-Re-Ask nach "Alle ablehnen".
+ *  trr_consent = JSON.stringify({ analytics: false, marketing: false, ts: … })
  */
 
 const STORAGE_KEY = "trr_consent";
-const REASK_MS = 24 * 60 * 60 * 1000; // 24 Stunden
 
 export interface ConsentPreferences {
   analytics: boolean;
@@ -37,15 +33,13 @@ export function readConsent(): { prefs: ConsentPreferences; shouldAsk: boolean }
     if (!raw) return { prefs: DEFAULT_PREFS, shouldAsk: true };
 
     const stored: StoredConsent = JSON.parse(raw);
-    const prefs: ConsentPreferences = {
-      analytics: !!stored.analytics,
-      marketing: !!stored.marketing,
+    return {
+      prefs: {
+        analytics: !!stored.analytics,
+        marketing: !!stored.marketing,
+      },
+      shouldAsk: false,
     };
-
-    const allDenied = !prefs.analytics && !prefs.marketing;
-    const expired = Date.now() - stored.ts > REASK_MS;
-
-    return { prefs, shouldAsk: allDenied && expired };
   } catch {
     return { prefs: DEFAULT_PREFS, shouldAsk: true };
   }

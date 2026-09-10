@@ -42,18 +42,20 @@ export function LegalPage({
   );
 }
 
-export function LegalH2({ children }: { children: React.ReactNode }) {
+export function LegalH2({
+  children,
+  id,
+}: {
+  children: React.ReactNode;
+  id?: string;
+}) {
   return (
-    <h2 className="font-display text-2xl md:text-3xl text-espresso pt-8 pb-1">{children}</h2>
+    <h2 id={id} className="font-display text-2xl md:text-3xl text-espresso pt-8 pb-1">
+      {children}
+    </h2>
   );
 }
 
 export function LegalH3({ children }: { children: React.ReactNode }) {
   return <h3 className="font-sans text-base font-medium text-espresso pt-4">{children}</h3>;
-}
-
-export function Placeholder({ children }: { children: React.ReactNode }) {
-  return (
-    <mark className="bg-almond/60 text-espresso px-1 rounded-sm not-italic">[{children}]</mark>
-  );
 }
