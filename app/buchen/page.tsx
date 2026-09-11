@@ -69,7 +69,11 @@ export default async function BuchenPage() {
                 </a>
               </div>
               <div className="bg-card border border-taupe/15 rounded-sm p-4 md:p-6">
-                <CalunioWidget type="schedule" view="week" />
+                <CalunioWidget
+                  type="schedule"
+                  view="week"
+                  startNextWeekUntil="2026-09-14"
+                />
               </div>
             </div>
           )}
