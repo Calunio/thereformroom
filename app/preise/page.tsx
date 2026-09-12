@@ -22,7 +22,7 @@ export default function PreisePage() {
       <Navigation />
 
       <main className="flex-1 pt-32 pb-24 lg:pt-40 lg:pb-32">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="eyebrow text-olive mb-5">{pricing.eyebrow}</p>
             <h1 className="font-display font-light text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight mb-5">
@@ -32,8 +32,6 @@ export default function PreisePage() {
           </div>
 
           <CalunioPricing />
-
-          <p className="text-center mt-8 text-sm text-espresso/50 font-light">{pricing.note}</p>
 
           <div className="text-center mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

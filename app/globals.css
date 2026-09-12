@@ -186,11 +186,12 @@ html {
 
 /* Calunio-Widgets: Layout nur, Farben kommen vom Tenant */
 .calunio-pricing,
+.calunio-pricing-overlay,
 [data-calunio-widget] {
   width: 100%;
   overflow: visible;
 }
 
-.calunio-pricing {
-  min-height: 280px;
+.calunio-pricing-overlay [data-calunio-widget] {
+  min-height: 240px;
 }

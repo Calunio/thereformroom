@@ -264,14 +264,19 @@ export default async function ReformerPilatesStadtPage({
       {/* Classes teaser */}
       <section className="py-20 lg:py-28 bg-porcelain">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="max-w-2xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-14">
             <ScrollReveal>
-              <p className="eyebrow text-olive mb-5">Classes</p>
+              <p className="eyebrow text-olive mb-5">{siteContent.courses.eyebrow}</p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h2 className="font-display font-light text-espresso text-3xl md:text-4xl leading-tight">
-                Dein Training im Reform Room
+              <h2 className="font-display font-light text-espresso text-3xl md:text-4xl leading-tight mb-5">
+                {siteContent.courses.heading}
               </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <p className="text-espresso/65 font-light leading-relaxed">
+                {siteContent.courses.subheading}
+              </p>
             </ScrollReveal>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -280,15 +285,29 @@ export default async function ReformerPilatesStadtPage({
                 key={course.id}
                 className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-5 lg:p-6"
               >
-                <p className="eyebrow text-olive mb-3 text-[11px]">{course.forWho}</p>
-                <h3 className="font-display text-xl text-espresso mb-3 leading-tight">
+                <h3 className="font-display text-xl text-espresso mb-2 leading-tight">
                   {course.name}
                 </h3>
+                <p className="font-display italic text-base text-espresso/55 font-light mb-3">
+                  {course.line}
+                </p>
                 <p className="text-espresso/65 text-sm leading-relaxed font-light">
                   {course.description}
                 </p>
               </article>
             ))}
+          </div>
+          <div className="mt-12 text-center max-w-xl mx-auto">
+            <p className="eyebrow text-olive mb-3">{siteContent.courses.comingSoon.eyebrow}</p>
+            <h3 className="font-display text-2xl text-espresso mb-2">
+              {siteContent.courses.comingSoon.name}
+            </h3>
+            <p className="text-espresso/65 font-light leading-relaxed">
+              {siteContent.courses.comingSoon.line}
+            </p>
+            <p className="mt-8 font-display italic text-xl text-espresso/70 font-light">
+              {siteContent.courses.tagline}
+            </p>
           </div>
           <div className="text-center mt-12">
             <Link

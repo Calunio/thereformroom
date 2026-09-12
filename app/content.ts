@@ -83,54 +83,58 @@ export const siteContent = {
     ] as Array<{ title: string; description: string }>,
   },
 
-  /** Kurse & Angebote */
+  /** Kurse & Angebote — Level-System (Lisa, 12.09.2026). */
   courses: {
     eyebrow: "Classes",
-    heading: "Finde deine Class.",
+    heading: "Choose your Class.",
     subheading:
-      "Finde den Kurs, der zu deinem Level und deinem Trainingsziel passt.",
+      "Egal, ob du gerade erst am Reformer startest oder dein Training intensiver gestalten möchtest – bei The Reform Room findest du die passende Class für dein Level.",
     items: [
       {
         id: "new-to-reformer",
         name: "New to Reformer",
-        forWho: "Für Einsteiger",
+        line: "Start here.",
         description:
           "Der ideale Einstieg für alle, die Reformer Pilates zum ersten Mal ausprobieren. Du lernst das Gerät, die wichtigsten Bewegungsabläufe und die grundlegende Technik in einem ruhigen und verständlichen Tempo kennen.",
         ctaBook: "Class buchen",
       },
       {
-        id: "booty-reform",
-        name: "Booty Reform",
-        forWho: "Glutes & Beine",
+        id: "reform-flow",
+        name: "Reform Flow",
+        line: "Build your flow.",
         description:
-          "Ein fokussiertes Reformer-Workout für Gesäß, Beine und Hüfte. Kontrollierte Bewegungen und gezielte Widerstände kräftigen die Muskulatur und sorgen für ein intensives Training des Unterkörpers.",
+          "Für alle, die das Gerät schon kennen und in einen fließenden Rhythmus finden möchten. Die Übungen gehen ineinander über, Atmung und Bewegung verbinden sich – präzise, rund und ganz in deinem Tempo.",
         ctaBook: "Class buchen",
       },
       {
-        id: "core-reform",
-        name: "Core Reform",
-        forWho: "Core & Stabilität",
+        id: "reform-power",
+        name: "Reform Power",
+        line: "Level up.",
         description:
-          "Ein gezieltes Training für die tiefliegende Bauch-, Rücken- und Rumpfmuskulatur. Die Übungen verbessern Stabilität, Haltung und Körperkontrolle und stärken deine Mitte nachhaltig.",
+          "Für alle, die ihr Training am Reformer intensiver gestalten möchten. Mehr Widerstand, mehr Kraft, weiterhin kontrolliert – ein Workout, das dich fordert und aufrichtet.",
         ctaBook: "Class buchen",
       },
       {
-        id: "jumpboard-reform",
-        name: "Jumpboard Reform",
-        forWho: "Cardio & Intensiv",
+        id: "jump-reform",
+        name: "Jump Reform",
+        line: "Take the jump.",
         description:
-          "Ein dynamisches und gelenkschonendes Reformer-Workout mit Jumpboard. Die Einheit verbindet Cardio, Beinkraft und Koordination und sorgt für ein energiegeladenes Training.",
+          "Ein dynamisches, gelenkschonendes Reformer-Workout mit Jumpboard. Die Einheit verbindet Cardio, Beinkraft und Koordination und sorgt für ein energiegeladenes Training.",
         ctaBook: "Class buchen",
       },
     ] as Array<{
       id: string;
       name: string;
-      forWho: string;
+      line: string;
       description: string;
       ctaBook: string;
     }>,
-    reformerNote:
-      "Neu auf dem Reformer? Dann starte mit New to Reformer. Wenn du bereits Erfahrung hast, melde dich gern direkt für eine Class an.",
+    comingSoon: {
+      eyebrow: "Bald",
+      name: "Reform Focus",
+      line: "Choose your focus – von Booty über Core bis Jump.",
+    },
+    tagline: "Choose your level. Find your flow. Move with purpose.",
   },
 
   /** How to book – 3 Schritte (inspiriert von Boutique-Studio-Flows) */
@@ -170,20 +174,29 @@ export const siteContent = {
     eyebrow: "Preise & Pakete",
     heading: "Dein Weg in den Reform Room.",
     subheading:
-      "Ob einmal reinschnuppern oder regelmäßig trainieren – finde das Modell, das zu deinem Leben passt. Mitgliedschaften und Class Packs siehst du live aus dem Buchungssystem.",
+      "Ob einmal reinschnuppern oder regelmäßig trainieren – finde das Modell, das zu deinem Leben passt. Öffne eine Karte, und die aktuellen Angebote kommen live aus dem Buchungssystem.",
     ctaBook: "Zum Kursplan",
-    note: "Kauf und Login öffnen bei Calunio. Special Offer und Experience gelten bis zum 17. Oktober 2026.",
+    overlayCloseAria: "Auswahl schließen",
     memberships: {
+      eyebrow: "Regelmäßig",
       heading: "Mitgliedschaften",
+      teaser:
+        "Dein Platz im Kursplan, Monat für Monat. Für alle, die Reformer als festen Teil ihrer Woche wollen.",
+      cta: "Mitgliedschaften ansehen",
     },
     packages: {
+      eyebrow: "Flexibel",
       heading: "Pakete & Credits",
+      teaser:
+        "Class Packs und Credits in deinem Tempo – einmal wählen, dann buchen, wenn es passt.",
+      cta: "Pakete ansehen",
     },
     giftcards: {
       eyebrow: "Verschenken",
       heading: "Gutscheine",
-      subheading:
+      teaser:
         "Eine Reformer-Class oder ein Pack als Geschenk – Einlösung über das Buchungssystem.",
+      cta: "Gutscheine ansehen",
     },
   },
 
@@ -368,3 +381,51 @@ export const siteContent = {
     logoAria: "The Reform Room – zur Startseite",
   },
 } as const;
+
+/**
+ * Archiv 12.09.2026: Class-Karten vor dem Level-System.
+ * Nicht rendern. Lisa will Booty / Core / Jumpboard später zurück –
+ * voraussichtlich über Reform Focus.
+ */
+export const coursesClassic = {
+  eyebrow: "Classes",
+  heading: "Finde deine Class.",
+  subheading: "Finde den Kurs, der zu deinem Level und deinem Trainingsziel passt.",
+  items: [
+    {
+      id: "new-to-reformer",
+      name: "New to Reformer",
+      forWho: "Für Einsteiger",
+      description:
+        "Der ideale Einstieg für alle, die Reformer Pilates zum ersten Mal ausprobieren. Du lernst das Gerät, die wichtigsten Bewegungsabläufe und die grundlegende Technik in einem ruhigen und verständlichen Tempo kennen.",
+      ctaBook: "Class buchen",
+    },
+    {
+      id: "booty-reform",
+      name: "Booty Reform",
+      forWho: "Glutes & Beine",
+      description:
+        "Ein fokussiertes Reformer-Workout für Gesäß, Beine und Hüfte. Kontrollierte Bewegungen und gezielte Widerstände kräftigen die Muskulatur und sorgen für ein intensives Training des Unterkörpers.",
+      ctaBook: "Class buchen",
+    },
+    {
+      id: "core-reform",
+      name: "Core Reform",
+      forWho: "Core & Stabilität",
+      description:
+        "Ein gezieltes Training für die tiefliegende Bauch-, Rücken- und Rumpfmuskulatur. Die Übungen verbessern Stabilität, Haltung und Körperkontrolle und stärken deine Mitte nachhaltig.",
+      ctaBook: "Class buchen",
+    },
+    {
+      id: "jumpboard-reform",
+      name: "Jumpboard Reform",
+      forWho: "Cardio & Intensiv",
+      description:
+        "Ein dynamisches und gelenkschonendes Reformer-Workout mit Jumpboard. Die Einheit verbindet Cardio, Beinkraft und Koordination und sorgt für ein energiegeladenes Training.",
+      ctaBook: "Class buchen",
+    },
+  ],
+  reformerNote:
+    "Neu auf dem Reformer? Dann starte mit New to Reformer. Wenn du bereits Erfahrung hast, melde dich gern direkt für eine Class an.",
+} as const;
+

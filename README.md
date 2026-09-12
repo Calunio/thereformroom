@@ -37,38 +37,37 @@ npm run build && npm run start
 | `BREVO_OPENING_LIST_ID` | Optional: feste Liste für Gästeliste. Leer = wird automatisch angelegt |
 | `BREVO_NOTIFY_EMAIL` | Empfänger der Kontaktformular-Benachrichtigung (Lisa) |
 | `BREVO_SENDER_EMAIL` | Verifizierte Absender-Adresse in Brevo |
-| `NEXT_PUBLIC_LAUNCH_DATE` | Coming-Soon-Inhalte auf der öffentlichen Domain (ISO-Datum). |
-| `NEXT_PUBLIC_PRELAUNCH_GATE` | `true` = thereformroom.de nur Overlay; `false` = Go-Live. Preview immer offen. |
+| `NEXT_PUBLIC_LAUNCH_DATE` | Go-Live-Zeitpunkt (ISO, Default `2026-09-12T20:00:30+02:00`). Gate + Coming-Soon. |
+| `NEXT_PUBLIC_PRELAUNCH_GATE` | `true` = Overlay auf thereformroom.de bis Launch; `false` = sofort live. Preview immer offen. |
 
 > Ohne `BREVO_API_KEY` geben die Formular-Routen einen Fehler zurück (kein Versand). Die Website funktioniert ansonsten normal.
 
 ---
 
-## Pre-Launch-Gate (Domain-basiert)
+## Pre-Launch-Gate (Domain + Uhrzeit)
 
 Während der Pre-Opening-Phase:
 
 | Domain | Ansicht |
 |---|---|
-| `thereformroom.de` / `www.thereformroom.de` | Nur Pre-Launch-Overlay (Warteliste) — Website nicht erreichbar |
+| `thereformroom.de` / `www.thereformroom.de` | Bis Launch nur Overlay (Warteliste); ab Launch volle Website |
 | `*.netlify.app` / `localhost` | Volle Website ohne Overlay (Team-Review) |
 
-Steuerung über `NEXT_PUBLIC_PRELAUNCH_GATE` (`app/lib/prelaunch-gate.ts` + `middleware.ts`):
+Steuerung (`app/lib/prelaunch-gate.ts` + `middleware.ts`):
 
-- **`true`** (Default) → Gate aktiv auf der öffentlichen Domain
-- **`false`** → Gate aus → volle Website live
-
-Zum Go-Live in Netlify `NEXT_PUBLIC_PRELAUNCH_GATE=false` setzen und neu deployen.
+- **`NEXT_PUBLIC_PRELAUNCH_GATE=true`** (Default) → Gate auf der öffentlichen Domain, **bis** `NEXT_PUBLIC_LAUNCH_DATE` (Default: 12.09.2026, 20:00:30 Europe/Berlin)
+- **`NEXT_PUBLIC_PRELAUNCH_GATE=false`** → Gate sofort aus
+- Nach dem Launch-Zeitpunkt fällt das Overlay von selbst weg (kein extra Deploy nötig, sofern dieser Stand schon live ist)
 
 Rechtliche Seiten (`/impressum`, `/datenschutz`, `/agb`), die Preis-Seite (`/preise`) sowie APIs bleiben auch im Gate erreichbar.
 
 ## Coming-Soon-Inhalte (Hero / Buchung)
 
-Zusätzlich steuert `NEXT_PUBLIC_LAUNCH_DATE` Coming-Soon-Inhalte auf der öffentlichen Domain (`app/lib/launch.ts`):
+Dieselbe Launch-Zeit steuert Coming-Soon-Inhalte auf der öffentlichen Domain (`app/lib/launch.ts`):
 
-- Datum **in der Zukunft** / **leer** → Newsletter statt Buchung im Hero, Buchungsseite „bald live"
-- Datum **erreicht** → normale Buchungs-CTAs
-- Auf Preview-Hosts immer volle Live-Ansicht (unabhängig vom Datum)
+- **vor** Launch → Newsletter statt Buchung im Hero, Buchungsseite „bald live"
+- **ab** Launch → normale Buchungs-CTAs
+- Auf Preview-Hosts immer volle Live-Ansicht
 
 ---
 

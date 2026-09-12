@@ -88,7 +88,7 @@ export default async function Home() {
       {/* ─── Courses ─── */}
       <section id="kurse" className="py-24 lg:py-32 bg-sand scroll-mt-20">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <ScrollReveal>
               <p className="eyebrow text-olive mb-5">{courses.eyebrow}</p>
             </ScrollReveal>
@@ -98,7 +98,9 @@ export default async function Home() {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
-              <p className="text-espresso/65 text-lg font-light">{courses.subheading}</p>
+              <p className="text-espresso/65 text-lg font-light leading-relaxed">
+                {courses.subheading}
+              </p>
             </ScrollReveal>
           </div>
 
@@ -106,10 +108,12 @@ export default async function Home() {
             {courses.items.map((course, i) => (
               <ScrollReveal key={course.id} delay={0.1 + i * 0.08}>
                 <article className="h-full flex flex-col bg-card border border-taupe/15 rounded-sm p-5 lg:p-6 hover:border-taupe/35 transition-colors">
-                  <p className="eyebrow text-olive mb-3 text-[11px]">{course.forWho}</p>
-                  <h3 className="font-display text-xl lg:text-2xl text-espresso mb-3 leading-tight">
+                  <h3 className="font-display text-xl lg:text-2xl text-espresso mb-2 leading-tight">
                     {course.name}
                   </h3>
+                  <p className="font-display italic text-base text-espresso/55 font-light mb-3">
+                    {course.line}
+                  </p>
                   <p className="text-espresso/65 text-sm leading-relaxed font-light mb-6 flex-1">
                     {course.description}
                   </p>
@@ -125,9 +129,21 @@ export default async function Home() {
             ))}
           </div>
 
-          <ScrollReveal delay={0.2}>
-            <p className="mt-10 text-center text-sm text-espresso/55 font-light max-w-2xl mx-auto italic">
-              {courses.reformerNote}
+          <ScrollReveal delay={0.25}>
+            <div className="mt-12 text-center max-w-xl mx-auto">
+              <p className="eyebrow text-olive mb-3">{courses.comingSoon.eyebrow}</p>
+              <h3 className="font-display text-2xl md:text-3xl text-espresso mb-2">
+                {courses.comingSoon.name}
+              </h3>
+              <p className="text-espresso/65 font-light leading-relaxed">
+                {courses.comingSoon.line}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.3}>
+            <p className="mt-10 text-center font-display italic text-xl md:text-2xl text-espresso/70 font-light max-w-2xl mx-auto">
+              {courses.tagline}
             </p>
           </ScrollReveal>
         </div>
@@ -197,7 +213,6 @@ export default async function Home() {
               >
                 {pricing.ctaBook}
               </Link>
-              <p className="mt-5 text-sm text-espresso/50 font-light">{pricing.note}</p>
             </div>
           </ScrollReveal>
         </div>

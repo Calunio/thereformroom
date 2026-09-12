@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { shouldShowPreLaunchGate } from "@/app/lib/prelaunch-gate";
+import { hasLaunched, shouldShowPreLaunchGate } from "@/app/lib/prelaunch-gate";
 
 /**
- * Pre-Launch-Gate: Auf thereformroom.de / www nur das Overlay zeigen.
- * Netlify-Preview (*.netlify.app) und localhost bleiben uneingeschränkt.
+ * Pre-Launch-Gate: Auf thereformroom.de / www nur das Overlay,
+ * bis zum Launch (12.09.2026, 20:00:30 Europe/Berlin).
+ * Danach volle Website — ohne extra Env-Switch.
+ * Netlify-Preview und localhost bleiben uneingeschränkt.
  *
- * Deaktivieren: NEXT_PUBLIC_PRELAUNCH_GATE=false in Netlify setzen.
+ * Sofort live: NEXT_PUBLIC_PRELAUNCH_GATE=false
  */
 
 const PASSTHROUGH_PREFIXES = ["/_next/", "/api/", "/prelaunch"];
@@ -28,14 +30,18 @@ function isStaticAsset(pathname: string): boolean {
 }
 
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (hasLaunched() && pathname === "/prelaunch") {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
   const host =
     request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
 
   if (!shouldShowPreLaunchGate(host)) {
     return NextResponse.next();
   }
-
-  const { pathname } = request.nextUrl;
 
   if (
     PASSTHROUGH_PREFIXES.some((p) => pathname.startsWith(p)) ||
